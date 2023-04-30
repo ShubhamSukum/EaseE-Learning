@@ -1,0 +1,38 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar{
+    display: flex;
+    height: 7vh;
+    width: 100vw;
+    font-size: large;
+    background: #0082e6;
+    font-weight: bold;
+    margin-right: 5vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link{
+  padding: 5px;
+  border:3px solid white;
+  border-radius: 3px;
+  margin: 10px;
+  text-decoration: none;
+  color:white;
+
+
+  /*
+    ONKAR's styling 
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none; */
+}
