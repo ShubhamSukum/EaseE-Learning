@@ -26,8 +26,6 @@
   margin: 10px;
   text-decoration: none;
   color:white;
-
-
   /*
     ONKAR's styling 
     color: white;
@@ -36,3 +34,59 @@
     border-radius: 3px;
     text-decoration: none; */
 }
+
+.SignUp{
+  margin-top: 7vh;
+  display: flex;
+  width: 30vw;
+  height: 80vh;
+  box-shadow: 0 0 6px grey;
+  align-items: center;
+  justify-content: center;
+}
+
+#Login{
+  height: 60vh;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+label{
+  display: block;
+  margin-top:3vh;
+}
+
+#signUP-Button{
+  margin-top: 2vh;
+  /* height: 5vh;
+  width:15vw; */
+
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-color: #0082e6;;
+    background-color: white;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.SignUp  input{
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 14px;
+    margin: 1vh;
+}
+
+#signUP-Button:hover{
+  background-color: #0082e6;;
+  color: white;
+}
+
+.Login-direct{
+  display: inline;
+}
+
