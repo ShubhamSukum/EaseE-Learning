@@ -73,7 +73,7 @@ label{
     width: 100px;
 }
 
-.SignUp  input{
+.SignUp input{
     padding: 10px;
     border-radius: 10px;
     width: 300px;
@@ -90,3 +90,21 @@ label{
   display: inline;
 }
 
+.logout-btn {
+  background-color: #f44336; /* Red background color */
+  border: none; /* No border */
+  color: white; /* White text color */
+  padding: 0.4vw 0.8vw; 
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 0.5vw;
+  border-radius: 5px;
+}
+
+/* Hover state */
+.logout-btn:hover {
+  background-color: #da190b;
+}

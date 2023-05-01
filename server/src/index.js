@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());    // Cross Origin Resource Sharing
 
 // for reducing code complexity router code is written in userRouter
-app.use("/auth", userRouter);
+app.use(userRouter);
 
 // Database Connection
 mongoose.connect(
