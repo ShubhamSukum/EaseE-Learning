@@ -2,6 +2,7 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
+// Includes Sign UP and Login 
 import { userModel } from "../models/UsersM.js";
 
 const router=express.Router();

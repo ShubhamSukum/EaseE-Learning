@@ -4,6 +4,8 @@ import cors from "cors";
 
 // importing routes to seperate code
 import { userRouter } from "./routes/users.js";
+import { homeRouter } from "./routes/home.js"
+import { testiRouter } from "./routes/testimonials.js";
 
 const app=express();
 
@@ -12,6 +14,8 @@ app.use(cors());    // Cross Origin Resource Sharing
 
 // for reducing code complexity router code is written in userRouter
 app.use(userRouter);
+app.use(homeRouter);
+app.use(testiRouter);
 
 // Database Connection
 mongoose.connect(
