@@ -28,6 +28,28 @@ export const Navbar=()=>{
             ):
             (<button onClick={logout} className="logout-btn">Logout</button>)
         }
+
+        {/* Comments */}
+
+        {/* <Link to="/signup" className="link"> Sign Up </Link>
+            <Link to="/login" className="link"> Login </Link> */}
+
+        {/* {
+            !cookies["access_token"]?
+            (
+                <div>
+                    <Link to="/login" className="link"> Home </Link>
+                    <Link to="/login" className="link">Courses</Link>
+                </div>
+            ):(
+                <div>
+                    <Link to="/" className="link"> Home </Link>
+                    <Link to="/courses" className="link">Courses</Link>
+                </div>
+            )
+        } */}
     </div>
     )
 };
+
+
