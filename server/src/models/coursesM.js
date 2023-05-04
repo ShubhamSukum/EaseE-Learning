@@ -5,15 +5,15 @@ const coursesM=mongoose.Schema({
         type:Number,
         required:true,
     },
-    duration:{
-        type:String,
-        required:true,
-    },
     topicName:{
         type:String,
         required:true,
     },
-    topicLink:{
+    duration:{
+        type:String,
+        required:true,
+    },
+    compName:{
         type:String,
         required:true,
     }

@@ -30,9 +30,7 @@ router.post("/signup",async(req,res)=>{
     // If user doesn't exist then code below this will work
     const hashedPassword=await bcrypt.hash(password,10);    // hashing password for safety purposes
 
-    const newUser=new userModel(
-        {name,username,password:hashedPassword,college,mobile}
-    );    // fitting data in Schema
+    const newUser=new userModel({name,username,password:hashedPassword,college,mobile});    // fitting data in Schema
     await newUser.save();   // Saving data in database
 
     res.json({message:"User Registered Successfully!!",success:"true"});
