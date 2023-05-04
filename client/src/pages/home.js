@@ -21,11 +21,11 @@ export const Home=()=>{
     <div>
         <div className="catogories-css">
             {
-                category.map((cat)=>{
+                category.map((cat,index)=>{
                     return(
-                        <div>
+                        <div key={index}>
                             <div>
-                                <img src={cat.imageURL} alt={cat.compName}/>
+                                <img src={cat.imageURL} alt={cat.compName} />
                             </div>
                             <p>{cat.compName}</p>
                         </div>
@@ -38,10 +38,10 @@ export const Home=()=>{
 
         <div className="testi-css">
             {
-                testi.map((t)=>{
+                testi.map((t,index)=>{
                     return(
-                        <div>
-                            <p><strong>{t.judge}</strong></p>
+                        <div key={index}>
+                            <p ><strong>{t.judge}</strong></p>
                             <p>{t.words}</p>
                         </div>
                     )

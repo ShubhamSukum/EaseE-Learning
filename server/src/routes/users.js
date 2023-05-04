@@ -23,7 +23,7 @@ router.post("/signup",async(req,res)=>{
         return res.json({message:"Password entered are different!!",errType:"pass"});
     }
 
-    if(mobile>9999999999 || mobile<100000000){
+    if(mobile>9999999999 || mobile<1000000000){
         return res.json({message:"Mobile number must be 10-digits only!!",errType:"mobile"});
     }
 

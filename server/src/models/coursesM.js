@@ -1,0 +1,22 @@
+import mongoose from "mongoose";
+
+const coursesM=mongoose.Schema({
+    courseId:{
+        type:Number,
+        required:true,
+    },
+    duration:{
+        type:String,
+        required:true,
+    },
+    topicName:{
+        type:String,
+        required:true,
+    },
+    topicLink:{
+        type:String,
+        required:true,
+    }
+},{versionKey:false});
+
+export const coursesModel=mongoose.model("courses",coursesM);

@@ -6,6 +6,7 @@ import cors from "cors";
 import { userRouter } from "./routes/users.js";
 import { homeRouter } from "./routes/home.js"
 import { testiRouter } from "./routes/testimonials.js";
+import {coursesRouter} from "./routes/courses.js"
 
 const app=express();
 
@@ -16,6 +17,7 @@ app.use(cors());    // Cross Origin Resource Sharing
 app.use(userRouter);
 app.use(homeRouter);
 app.use(testiRouter);
+app.use(coursesRouter);
 
 // Database Connection
 mongoose.connect(
