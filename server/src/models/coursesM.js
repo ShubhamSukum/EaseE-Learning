@@ -20,3 +20,12 @@ const coursesM=mongoose.Schema({
 },{versionKey:false});
 
 export const coursesModel=mongoose.model("courses",coursesM);
+
+/*
+Sample data structure
+
+"courseId":3,
+"topicName":"Blockchain Technology",
+"duration":"4 weeks",
+"compName":"Computer Engineering"
+*/
