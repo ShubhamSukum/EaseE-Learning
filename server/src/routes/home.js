@@ -16,6 +16,6 @@ homeRouter.get("/categories",async(req,res)=>{
     }catch(err){
         res.json(err);
     }
-});  
+});
 
 export {homeRouter};

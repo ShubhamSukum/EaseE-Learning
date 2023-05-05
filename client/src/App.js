@@ -22,11 +22,12 @@ function App() {
         <Routes>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/component/:compName" element={<Courses/>}/>
             {/* <ProtectedRoute path="/"> */}
           <Route path="/" element={
             <ProtectedRoute>
               <Home />
-              </ProtectedRoute>
+            </ProtectedRoute>
           }/>
           {/* <Home/> */}
           {/* </ProtectedRoute> */}

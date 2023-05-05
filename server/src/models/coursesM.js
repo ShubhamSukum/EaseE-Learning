@@ -17,7 +17,7 @@ const coursesM=mongoose.Schema({
         type:String,
         required:true,
     }
-},{versionKey:false});
+},{versionKey:false, timestamp:true});
 
 export const coursesModel=mongoose.model("courses",coursesM);
 

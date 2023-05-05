@@ -26,7 +26,7 @@ const userSchema=mongoose.Schema({
         type:Number,
         required:true,
     }
-});
+},{versionKey:false, timestamps:true});
 
 export const userModel=mongoose.model("users",userSchema);
 

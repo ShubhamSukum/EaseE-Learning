@@ -28,6 +28,7 @@ export const Home=()=>{
                                 <img src={cat.imageURL} alt={cat.compName} />
                             </div>
                             <p>{cat.compName}</p>
+                            <a href={"/component/"+cat.compName}><button>button</button></a>
                         </div>
                     )
                 })

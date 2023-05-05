@@ -1,3 +1,7 @@
+import { useParams } from "react-router-dom";
+
 export const Courses=()=>{
-    return <div>Courses page</div>
+    const params = useParams();
+    console.log(params.compName);
+    return <div>{params.compName}</div>
 };
