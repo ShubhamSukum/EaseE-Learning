@@ -64,7 +64,18 @@ export const Home=()=>{
 
                 <div className="footer-content">
                     <h2>About US </h2><br/><br/>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente, at libero quae, non delectus enim dolor eum error molestias repellat maiores ullam. Voluptatum ipsa porro officia et ducimus nihil ullam maxime, mollitia similique omnis optio quia soluta neque, sed vel officiis minus alias provident eius excepturi blanditiis facere! Ex.</p>
+                    <p>
+                        Welcome to EaseE Learning, where we provide an exceptional online learning experience to 
+                        students all around the world.Our mission is to empower learners of all backgrounds and ages 
+                        with the knowledge and skills they need to succeed in their personal and professional lives. 
+                        We believe that education should be accessible, affordable, and enjoyable, which is why we 
+                        created a platform that offers high-quality courses in a wide range of topics.
+                        Our platform is user-friendly and easy to navigate, allowing you to learn at your own pace, 
+                        on your own schedule. You can access our courses from anywhere in the world, and our responsive 
+                        support team is always available to answer your questions and provide guidance.
+                        We take pride in our commitment to excellence and our dedication to our students. 
+                        Join us today and take the first step towards achieving your goals with EaseE Learning.
+                    </p>
                 </div>
 
             </div>
