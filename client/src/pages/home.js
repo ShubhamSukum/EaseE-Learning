@@ -50,5 +50,25 @@ export const Home=()=>{
             }
         </div>
 
+        <section style={{background: "#2c3e50"}}>
+            <div className="footer">
+
+                <div className="footer-content">
+                    <div className="icons"> 
+                        <a href="https://www.facebook.com/">Facebook</a>                    
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://twitter.com/">Twitter</a>
+                        <a href="https://www.linkedin.com/">Linked IN</a>
+                    </div>
+                </div>
+
+                <div className="footer-content">
+                    <h2>About US </h2><br/><br/>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente, at libero quae, non delectus enim dolor eum error molestias repellat maiores ullam. Voluptatum ipsa porro officia et ducimus nihil ullam maxime, mollitia similique omnis optio quia soluta neque, sed vel officiis minus alias provident eius excepturi blanditiis facere! Ex.</p>
+                </div>
+
+            </div>
+        </section>
+
     </div>)
 };
