@@ -33,21 +33,26 @@ export const Courses=()=>{
     return(
         <div>
             {/* {params.compName}#87CEEB */}
-
+            <section style={{ background: "#f5f5f5", paddingTop: "30px", paddingBottom: "5px" }}>
+            <h1 class="cat">List of Courses</h1>
+            <center><hr class="hr" /></center>
+            <div className="category">
             {
                 courseList.map((data,index)=>{
                     return(
-                        <div style={{margin:"10px"}} key={index}>
-                            <h2>courseId = {data.courseId}</h2>
+                        <div key={index} className="category-content">
+                            {/* <h2>courseId = {data.courseId}</h2> */}
                             <img src={data.courseLink} alt={data.topicName+" image"}/>
-                            <h2>topicName = {data.topicName}</h2>
-                            <h2>compName = {data.compName}</h2>
-                            <h2>duration ={data.duration}</h2>
-                            <button style={{backgroundColor:"rgb(0,191,255)"}} className="logout-btn">ENROLL</button>
+                            <h2>{data.topicName}</h2>
+                            {/* <p>{data.compName}</p> */}
+                            <p>Duration: {data.duration}</p>
+                            <button>ENROLL</button>
                         </div>
                     )
                 })
-            }    
+            }  
+            </div>
+            </section>  
         </div>
     ) 
 };
