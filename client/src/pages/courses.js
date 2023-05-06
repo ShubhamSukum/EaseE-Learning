@@ -39,6 +39,7 @@ export const Courses=()=>{
                     return(
                         <div style={{margin:"10px"}} key={index}>
                             <h2>courseId = {data.courseId}</h2>
+                            <img src={data.courseLink} alt={data.topicName+" image"}/>
                             <h2>topicName = {data.topicName}</h2>
                             <h2>compName = {data.compName}</h2>
                             <h2>duration ={data.duration}</h2>

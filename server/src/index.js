@@ -6,7 +6,7 @@ import cors from "cors";
 import { userRouter } from "./routes/users.js";
 import { homeRouter } from "./routes/home.js"
 import { testiRouter } from "./routes/testimonials.js";
-import {coursesRouter} from "./routes/courses.js"
+import { coursesRouter } from "./routes/courses.js"
 
 const app=express();
 

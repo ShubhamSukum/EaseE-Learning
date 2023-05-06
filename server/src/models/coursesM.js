@@ -16,6 +16,10 @@ const coursesM=mongoose.Schema({
     compName:{
         type:String,
         required:true,
+    },
+    courseLink:{
+        type:String,
+        required:true,
     }
 },{versionKey:false, timestamp:true});
 
