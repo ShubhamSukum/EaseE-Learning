@@ -12,7 +12,7 @@ const homeRouter=express.Router();
 
 homeRouter.get("/categories",async(req,res)=>{
     try{
-        const category=await coursesModel.find({});
+        const category=await homeModel.find({});
         res.json(category);
     }catch(err){
         res.json(err);
