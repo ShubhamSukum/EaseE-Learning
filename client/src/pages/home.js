@@ -23,7 +23,7 @@ export const Home = () => {
 
             <section>
                 <div className="headings">
-                    <h1 style={{ color: "black", paddingTop: "180px" }}> EaseE-LEARNIGN</h1>
+                    <h1 style={{ color: "black", paddingTop: "180px" }}> EaseE-LEARNING</h1>
                     <h1>Empowering Education with Effortless Course Management</h1>
                     <p>We're simplifying learning with our intuitive course management system.</p>
                     <button>CHECK OUR COURSE CATAGORIES</button>
