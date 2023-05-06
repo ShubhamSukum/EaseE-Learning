@@ -46,7 +46,7 @@ export const Courses = () => {
                                     <h2>{data.topicName}</h2>
                                     {/* <p>{data.compName}</p> */}
                                     <p>Duration: {data.duration}</p>
-                                    <button>ENROLL</button>
+                                    <button>View Course</button>
                                 </div>
                             )
                         })

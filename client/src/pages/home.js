@@ -7,7 +7,7 @@ export const Home = () => {
     const [testi, allTesti] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/categories").then((res) => {
+        Axios.get("http://localhost:3001/courseCategories").then((res) => {
             allCatergory(res.data);
         })
     }, []);
@@ -41,7 +41,7 @@ export const Home = () => {
                                 <div key={index} className="category-content">
                                     <img src={cat.imageURL} alt={cat.compName} />
                                     <p>{cat.compName}</p>
-                                    <a href={"/component/" + cat.compName}><button>View Courses</button></a>
+                                    <a href={"/component/" + cat.compName}><button>Explore More</button></a>
                                 </div>
                             )
                         })

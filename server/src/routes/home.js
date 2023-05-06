@@ -10,7 +10,7 @@ app.use(cors());
 
 const homeRouter=express.Router();
 
-homeRouter.get("/categories",async(req,res)=>{
+homeRouter.get("/courseCategories",async(req,res)=>{
     try{
         const category=await homeModel.find({});
         res.json(category);
