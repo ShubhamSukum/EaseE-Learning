@@ -1,85 +1,96 @@
-import {useEffect,useState} from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
+import '../App.css'
 
-export const Home=()=>{
-    const [category,allCatergory]=useState([]);
-    const [testi,allTesti]=useState([]);
+export const Home = () => {
+    const [category, allCatergory] = useState([]);
+    const [testi, allTesti] = useState([]);
 
-    useEffect(()=>{
-        Axios.get("http://localhost:3001/categories").then((res)=>{
+    useEffect(() => {
+        Axios.get("http://localhost:3001/categories").then((res) => {
             allCatergory(res.data);
         })
-    },[]);
+    }, []);
 
-    useEffect(()=>{
-        Axios.get("http://localhost:3001/getTesti").then((res)=>{
+    useEffect(() => {
+        Axios.get("http://localhost:3001/getTesti").then((res) => {
             allTesti(res.data);
         })
-    },[]);
+    }, []);
 
-    return(
-    <div>
-        <div className="catogories-css">
-            {
-                category.map((cat,index)=>{
-                    return(
-                        <div key={index}>
-                            <div>
-                                <img src={cat.imageURL} alt={cat.compName} />
-                            </div>
-                            <p>{cat.compName}</p>
-                            <a href={"/component/"+cat.compName}><button>button</button></a>
-                        </div>
-                    )
-                })
-            }
-        </div>
+    return (
+        <div>
+            <section style={{ background: "#f5f5f5", paddingTop: "30px", paddingBottom: "5px" }}>
+                <h1 className="cat">Course Catagory</h1>
+                <center><span><hr className="hr" /></span></center>
+                <div className="category">
+                    {
+                        category.map((cat, index) => {
+                            return (
+                                <div key={index} className="category-content">
+                                    <img src={cat.imageURL} alt={cat.compName} />
+                                    <p>{cat.compName}</p>
+                                    <a href={"/component/" + cat.compName}><button>View Courses</button></a>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </section>
 
-        <p style={{fontSize:"2.5vh",fontWeight:"bolder"}}>TESTIMONIALS</p>
-
-        <div className="testi-css">
-            {
-                testi.map((t,index)=>{
-                    return(
-                        <div key={index}>
-                            <p ><strong>{t.judge}</strong></p>
-                            <p>{t.words}</p>
-                        </div>
-                    )
-                })
-            }
-        </div>
-
-        <section style={{background: "#2c3e50"}}>
-            <div className="footer">
-
-                <div className="footer-content">
-                    <div className="icons"> 
-                        <a href="https://www.facebook.com/">Facebook</a>                    
-                        <a href="https://www.instagram.com/">Instagram</a>
-                        <a href="https://twitter.com/">Twitter</a>
-                        <a href="https://www.linkedin.com/">Linked IN</a>
+            <section>
+                <h1 style={{ marginTop: "40px" }}>Testimonials</h1>
+                <center><span><hr class="hr" style={{ marginBottom: "70px" }} /></span></center>
+                <div style={{ background: "#0082e6" }}>
+                    <div className="testimonials">
+                        {
+                            testi.map((t, index) => {
+                                return (
+                                    <div key={index} className="test-data">
+                                        <h2 >{t.judge}</h2>
+                                        <p>{t.words}</p>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
+            </section>
 
-                <div className="footer-content">
-                    <h2>About US </h2><br/><br/>
-                    <p>
-                        Welcome to EaseE Learning, where we provide an exceptional online learning experience to 
-                        students all around the world.Our mission is to empower learners of all backgrounds and ages 
-                        with the knowledge and skills they need to succeed in their personal and professional lives. 
-                        We believe that education should be accessible, affordable, and enjoyable, which is why we 
-                        created a platform that offers high-quality courses in a wide range of topics.
-                        Our platform is user-friendly and easy to navigate, allowing you to learn at your own pace, 
-                        on your own schedule. You can access our courses from anywhere in the world, and our responsive 
-                        support team is always available to answer your questions and provide guidance.
-                        We take pride in our commitment to excellence and our dedication to our students. 
-                        Join us today and take the first step towards achieving your goals with EaseE Learning.
-                    </p>
-                </div>
+            <section style={{background: "#2c3e50"}}>
+                <div className="footer">
+                    <div className="footer-content">
+                        <div className="icons">
+                            <div>
+                                <i className="fa fa-facebook-square"></i>
+                                <a href="www.facebook.com" target="_blank">Facebook</a>
+                            </div>
 
-            </div>
-        </section>
+                            <div>
+                                <i className="fa fa-instagram"></i>
+                                <a href="www.instagram.com" target="_blank">Instagram</a>
+                            </div>
 
-    </div>)
+                            <div>
+                                <i className="fa fa-twitter-square"></i>
+                                <a href="www.twitter.com" target="_blank">Twitter</a>
+                            </div>
+
+                            <div>
+                                <i className="fa fa-linkedin-square"></i>
+                                <a href="www.linkedin.com" target="_blank">Linked IN</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="footer-content">
+                        <h2>About US </h2><br />
+                            <p>Our course management system is designed to provide an intuitive and user-friendly interface for instructors and students. With our platform, instructors can easily create and manage courses, including adding syllabus, assignments, quizzes, and resources. They can also track student progress and grades to ensure that everyone is staying on track. Students can easily browse and enroll in courses, access course materials, and communicate with their instructors and peers. </p>
+                        </div>
+                    </div>
+            </section>
+
+
+
+        </div>)
 };

@@ -1,7 +1,15 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 
 .App {
   text-align: center;
@@ -109,19 +117,102 @@ label{
   background-color: #da190b;
 }
 
+
+
+/* HOME PAGE STYLING */
+
+h1 {
+    
+  text-align: center;
+  font-size: 40px;
+  color: #0082e6;
+}
+
+.hr {
+  border: 2px solid #0082e6;
+  width: 320px;
+}
+
+.category {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background: #f5f5f5;
+}
+
+.category-content {
+  margin-top: 100px;
+  width: 350px;
+}
+
+.category-content img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.category-content p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.category-content button {
+  width: 130px;
+  height: 40px;
+  background: #0082e6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+  display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-bottom: 70px;
+   margin-left: 100px;
+   margin-right: 100px;
+}
+
+.test-data{
+  margin-top: 100px;
+  width: 350px;
+  margin-bottom: 100px;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.test-data:hover{
+  background: white;
+  color:#0082e6;
+}
+
+
 /* Footer */
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  /* margin-left: 100px;
-  margin-right: 100px; */
-  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .icons{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+  
 }
 
 .icons i{
@@ -132,14 +223,16 @@ label{
 
 .icons a{
   text-decoration: none;
-  margin:2vh;
   color: white;
 }
 
 .footer-content{
-  margin-top: 100px;
+  margin-top: 50px;
   width: 450px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: white;
 }
-/* Footer */
+
+.footer-content p{
+  text-align: justify;
+}
