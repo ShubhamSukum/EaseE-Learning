@@ -40,7 +40,7 @@ export const Home = () => {
 
             <section>
                 <h1 style={{ marginTop: "40px" }}>Testimonials</h1>
-                <center><span><hr class="hr" style={{ marginBottom: "70px" }} /></span></center>
+                <center><span><hr className="hr" style={{ marginBottom: "70px" }} /></span></center>
                 <div style={{ background: "#0082e6" }}>
                     <div className="testimonials">
                         {
@@ -63,22 +63,22 @@ export const Home = () => {
                         <div className="icons">
                             <div>
                                 <i className="fa fa-facebook-square"></i>
-                                <a href="www.facebook.com" target="_blank">Facebook</a>
+                                <a href="www.facebook.com">Facebook</a>
                             </div>
 
                             <div>
                                 <i className="fa fa-instagram"></i>
-                                <a href="www.instagram.com" target="_blank">Instagram</a>
+                                <a href="www.instagram.com">Instagram</a>
                             </div>
 
                             <div>
                                 <i className="fa fa-twitter-square"></i>
-                                <a href="www.twitter.com" target="_blank">Twitter</a>
+                                <a href="www.twitter.com">Twitter</a>
                             </div>
 
                             <div>
                                 <i className="fa fa-linkedin-square"></i>
-                                <a href="www.linkedin.com" target="_blank">Linked IN</a>
+                                <a href="www.linkedin.com">Linked IN</a>
                             </div>
 
                         </div>
@@ -89,8 +89,5 @@ export const Home = () => {
                         </div>
                     </div>
             </section>
-
-
-
         </div>)
 };
