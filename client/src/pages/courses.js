@@ -34,8 +34,8 @@ export const Courses = () => {
         <div>
             {/* {params.compName}#87CEEB */}
             <section style={{ background: "#f5f5f5", paddingTop: "30px", paddingBottom: "5px" }}>
-                <h1 class="cat">List of Courses</h1>
-                <center><hr class="hr" /></center>
+                <h1 className="cat">List of Courses</h1>
+                <center><hr className="hr" /></center>
                 <div className="category">
                     {
                         courseList.map((data, index) => {

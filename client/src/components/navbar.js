@@ -9,7 +9,8 @@ export const Navbar=()=>{
 
     const logout=()=>{
         setCookies("access_token","");
-        window.localStorage.removeItem("userId");
+        window.localStorage.removeItem("userId");   
+        console.log("Executed!!")
         navigate("/login")
     };
     
