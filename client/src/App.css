@@ -15,25 +15,25 @@ body {
   text-align: center;
 }
 
-.navbar{
-    display: flex;
-    height: 7vh;
-    width: 100vw;
-    font-size: large;
-    background: #0082e6;
-    font-weight: bold;
-    margin-right: 5vw;
-    justify-content: flex-end;
-    align-items: center;
+.navbar {
+  display: flex;
+  height: 7vh;
+  width: 100vw;
+  font-size: large;
+  background: #0082e6;
+  font-weight: bold;
+  margin-right: 5vw;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.link{
+.link {
   padding: 5px;
-  border:3px solid white;
+  border: 3px solid white;
   border-radius: 3px;
   margin: 10px;
   text-decoration: none;
-  color:white;
+  color: white;
   /*
     ONKAR's styling 
     color: white;
@@ -43,7 +43,7 @@ body {
     text-decoration: none; */
 }
 
-.SignUp{
+.SignUp {
   margin-top: 7vh;
   display: flex;
   width: 30vw;
@@ -53,61 +53,71 @@ body {
   justify-content: center;
 }
 
-#Login{
+#Login {
   height: 60vh;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
 }
 
-label{
+label {
   display: block;
-  margin-top:3vh;
+  margin-top: 3vh;
 }
 
-#signUP-Button{
+#signUP-Button {
   margin-top: 2vh;
   /* height: 5vh;
   width:15vw; */
 
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    border-color: #0082e6;;
-    background-color: white;
-    border-radius: 10px;
-    width: 100px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-color: #0082e6;
+  ;
+  background-color: white;
+  border-radius: 10px;
+  width: 100px;
 }
 
-.SignUp input{
-    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    font-size: 14px;
-    margin: 1vh;
+.SignUp input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 14px;
+  margin: 1vh;
 }
 
-#signUP-Button:hover{
-  background-color: #0082e6;;
+#signUP-Button:hover {
+  background-color: #0082e6;
+  ;
   color: white;
 }
 
-.Login-direct{
+.Login-direct {
   display: inline;
 }
 
 .logout-btn {
-  background-color: #f44336; /* Red background color */
-  border: none; /* No border */
-  color: white; /* White text color */
-  padding: 0.4vw 0.8vw; 
-  text-align: center; /* Center text */
-  text-decoration: none; /* No underline */
-  display: inline-block; /* Display as inline-block */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: #f44336;
+  /* Red background color */
+  border: none;
+  /* No border */
+  color: white;
+  /* White text color */
+  padding: 0.4vw 0.8vw;
+  text-align: center;
+  /* Center text */
+  text-decoration: none;
+  /* No underline */
+  display: inline-block;
+  /* Display as inline-block */
+  font-size: 16px;
+  /* Font size */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
   margin-right: 0.5vw;
   border-radius: 5px;
 }
@@ -119,10 +129,43 @@ label{
 
 
 
+
 /* HOME PAGE STYLING */
 
+
+/* Heading styling */
+
+.headings h1 {
+  padding-top: 20px;
+  font-size: 80px;
+  line-height: 1em;
+  letter-spacing: -3px;
+}
+
+.headings p {
+  padding-top: 70px;
+  font-size: 30px;
+  line-height: 1.32em;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.headings button {
+  width: 300px;
+  height: 40px;
+  background: #0082e6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-bottom: 150px;
+}
+
+
+/* Course Category */
+
 h1 {
-    
   text-align: center;
   font-size: 40px;
   color: #0082e6;
@@ -171,17 +214,17 @@ h1 {
 }
 
 /* TESTIMONIALS */
-.testimonials{
+.testimonials {
   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin-bottom: 70px;
-   margin-left: 100px;
-   margin-right: 100px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.test-data{
+.test-data {
   margin-top: 100px;
   width: 350px;
   margin-bottom: 100px;
@@ -191,9 +234,9 @@ h1 {
   border-radius: 10px;
 }
 
-.test-data:hover{
+.test-data:hover {
   background: white;
-  color:#0082e6;
+  color: #0082e6;
 }
 
 
@@ -207,32 +250,32 @@ h1 {
   margin-right: 100px;
 }
 
-.icons{
+.icons {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline;
-  
+
 }
 
-.icons i{
+.icons i {
   font-size: 30px;
   margin-bottom: 20px;
   margin-right: 30px;
 }
 
-.icons a{
+.icons a {
   text-decoration: none;
   color: white;
 }
 
-.footer-content{
+.footer-content {
   margin-top: 50px;
   width: 450px;
   margin-bottom: 50px;
   color: white;
 }
 
-.footer-content p{
+.footer-content p {
   text-align: justify;
 }

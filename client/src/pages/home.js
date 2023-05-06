@@ -19,7 +19,18 @@ export const Home = () => {
     }, []);
 
     return (
-        <div>
+        <>
+
+            <section>
+                <div className="headings">
+                    <h1 style={{ color: "black", paddingTop: "180px" }}> EaseE-LEARNIGN</h1>
+                    <h1>Empowering Education with Effortless Course Management</h1>
+                    <p>We're simplifying learning with our intuitive course management system.</p>
+                    <button>CHECK OUR COURSE CATAGORIES</button>
+                </div>
+            </section>
+
+
             <section style={{ background: "#f5f5f5", paddingTop: "30px", paddingBottom: "5px" }}>
                 <h1 className="cat">Course Catagory</h1>
                 <center><span><hr className="hr" /></span></center>
@@ -57,7 +68,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section style={{background: "#2c3e50"}}>
+            <section style={{ background: "#2c3e50" }}>
                 <div className="footer">
                     <div className="footer-content">
                         <div className="icons">
@@ -85,12 +96,12 @@ export const Home = () => {
                     </div>
                     <div className="footer-content">
                         <h2>About US </h2><br />
-                            <p>Our course management system is designed to provide an intuitive and user-friendly interface for instructors and students. With our platform, instructors can easily create and manage courses, including adding syllabus, assignments, quizzes, and resources. They can also track student progress and grades to ensure that everyone is staying on track. Students can easily browse and enroll in courses, access course materials, and communicate with their instructors and peers. </p>
-                        </div>
+                        <p>Our course management system is designed to provide an intuitive and user-friendly interface for instructors and students. With our platform, instructors can easily create and manage courses, including adding syllabus, assignments, quizzes, and resources. They can also track student progress and grades to ensure that everyone is staying on track. Students can easily browse and enroll in courses, access course materials, and communicate with their instructors and peers. </p>
                     </div>
+                </div>
             </section>
 
 
 
-        </div>)
+        </>)
 };
