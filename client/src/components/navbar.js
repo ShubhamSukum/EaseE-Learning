@@ -1,17 +1,29 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import '../App.css';
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
-    const [cookies, setCookies] = useCookies(["access_token"]);
+    const [cookies, , removeCookie] = useCookies(["access_token"]);
     // console.log(cookies["access_token"]);
 
     const navigate = useNavigate();
+    const [ourCookie, setOurCookie] = useState(false)
+
+    useEffect(() => {
+        // console.log("CHANGED....", cookies["access_token"])
+        if(cookies["access_token"]) {
+            setOurCookie(true)
+        }
+        else {
+            setOurCookie(false)
+        }
+    }, [cookies])
 
     const logout=()=>{
-        setCookies("access_token","");
+        removeCookie("access_token", {path: "/", domain: "localhost"});
         localStorage.removeItem("userID");   
-        console.log("Executed!!")
+        // console.log("Executed!!")
         navigate("/login")
     };
 
@@ -19,17 +31,17 @@ export const Navbar = () => {
         <>
             <nav>
                 <input type="checkbox" id="check" />
-                <label for="check" className="checkbtn">
+                <label htmlFor="check" className="checkbtn">
                     <i className="fa fa-bars"></i>
                 </label>
                 <label className="logo">EaseE-Learning</label>
                 <ul>
                     <li><Link to="/" className="link"> Home </Link></li>
-                    <li><Link to="/courses" className="link">Courses</Link></li>
+                    <li><Link to="/allcourses" className="link">Courses</Link></li>
                 </ul>
 
                 {
-                    !cookies["access_token"] ?
+                    !ourCookie?
                         (
                             <ul>
                                 <li><Link to="/signup" className="link"> Sign Up </Link></li>

@@ -4,6 +4,8 @@ import {Home} from "./pages/home";
 import {SignUp} from "./pages/signUp";
 import {Courses} from "./pages/courses";
 import {Login} from "./pages/login";
+import {AllCourses} from "./pages/allCourses"
+
 import Cookies from "js-cookie";
 // import { refresh } from "./http/apis";
 // import Cookies from "js-cookie";
@@ -22,7 +24,15 @@ function App() {
         <Routes>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/component/:compName" element={<Courses/>}/>
+            <Route path="/component/:compName" element={<Courses/>}/> 
+            <Route path="/allcourses" element={<AllCourses/>}/>
+
+            {/* // element = {FunctionPage code}  should be in Pascal Case camelCase 
+            gives error I wasted my 30 mins on it T-T */}
+            
+            {/* if we use  <Route path=..... element={<courses/>}/>  if c is small then it gives error 
+            USE PascalCase DON'T USE camelCase */}
+
             {/* <ProtectedRoute path="/"> */}
           <Route path="/" element={
             <ProtectedRoute>
@@ -32,11 +42,17 @@ function App() {
           {/* <Home/> */}
           {/* </ProtectedRoute> */}
           {/* <ProtectedRoute to="/courses"> */}
-          <Route path="/courses" element={
+          {/* <Route path="/courses" element={
             <ProtectedRoute>
               <Courses/>
             </ProtectedRoute>
-          }/>
+          }/> */}
+
+          {/* <Route path="/allCourses" element={
+            <ProtectedRoute>
+              <allCourses/>
+            </ProtectedRoute>
+          }/> */}
           {/* </ProtectedRoute> */}
         </Routes>
       </Router>

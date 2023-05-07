@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import '../App.css'
+import { Link } from "react-router-dom";
 
 export const Home = () => {
     const [category, allCatergory] = useState([]);
@@ -41,7 +42,7 @@ export const Home = () => {
                                 <div key={index} className="category-content">
                                     <img src={cat.imageURL} alt={cat.compName} />
                                     <p>{cat.compName}</p>
-                                    <a href={"/component/" + cat.compName}><button>Explore More</button></a>
+                                    <Link to={"/component/" + cat.compName}><button>Explore More</button></Link>
                                 </div>
                             )
                         })

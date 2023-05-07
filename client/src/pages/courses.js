@@ -4,20 +4,10 @@ import Axios from "axios";
 
 export const Courses = () => {
     const params = useParams();
-    console.log(params.compName);
-
-    // if(params.compName==="undefined"){
-    //     useEffect(()=>{
-    //         Axios.get("http://localhost:3001/categories").then((res)=>{
-    //             allCourseList(res.data);
-    //             console.log(res);
-    //         }).catch((err)=>{       
-    //             console.log(err)
-    //         });
-    //     },[]);
-    // }
+    // console.log(params.compName);
 
     const [courseList, allCourseList] = useState([]);
+    
 
     useEffect(() => {
         Axios.post("http://localhost:3001/categories", { compName: params.compName }).then((res) => {
@@ -27,8 +17,6 @@ export const Courses = () => {
             console.log(err)
         });
     }, [params.compName]);
-
-
 
     return (
         <div>
@@ -46,7 +34,7 @@ export const Courses = () => {
                                     <h2>{data.topicName}</h2>
                                     {/* <p>{data.compName}</p> */}
                                     <p>Duration: {data.duration}</p>
-                                    <button>View Course</button>
+                                    <button >View Course</button>
                                 </div>
                             )
                         })
