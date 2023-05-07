@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SignUp = () => {
     const [name, setName] = useState("");
@@ -10,8 +11,11 @@ export const SignUp = () => {
     const [college, setcollege] = useState("");
     const [mobile, setmobile] = useState("");
 
+    const navigate=useNavigate();
+
     const onSubmit = async (event) => {
         event.preventDefault();
+        
 
         try {
             await axios.post("http://localhost:3001/signup", { name, username, password, confirmPass, college, mobile })
@@ -28,6 +32,7 @@ export const SignUp = () => {
 
                     if (res.data.success === "true") {
                         alert(res.data.message);
+                        navigate("/")
                     }
                 });
 
