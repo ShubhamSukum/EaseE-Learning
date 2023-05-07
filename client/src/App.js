@@ -5,13 +5,14 @@ import {SignUp} from "./pages/signUp";
 import {Courses} from "./pages/courses";
 import {Login} from "./pages/login";
 import {AllCourses} from "./pages/allCourses"
+import {YtCourse} from "./pages/courseYT";
 
 import Cookies from "js-cookie";
 // import { refresh } from "./http/apis";
 // import Cookies from "js-cookie";
 // import { useState, useEffect } from "react";
 // import {ProtectedRoute} from ""
-import {Navbar} from "./components/navbar"
+import {Navbar} from "./components/navbar";
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/component/:compName" element={<Courses/>}/> 
             <Route path="/allcourses" element={<AllCourses/>}/>
+            <Route path="/ytcoursemodule/:ytcourse" element={<YtCourse/>}/>
 
             {/* // element = {FunctionPage code}  should be in Pascal Case camelCase 
             gives error I wasted my 30 mins on it T-T */}

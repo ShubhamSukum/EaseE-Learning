@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
+import {Link} from "react-router-dom";
 
 export const AllCourses=()=>{
     const [listCourses,setListOfCourses]=useState([]);
+    // const [courseId,setCourseId]=useState(0);
 
     useEffect(()=>{
         axios.get("http://localhost:3001/courses").then((res)=>{
@@ -11,6 +13,20 @@ export const AllCourses=()=>{
             console.log(err)
         })
     })
+
+    // const butClick=async(courseId)=>{
+    //     console.log("ashdbss")
+    //     try{
+    //         await axios.post("http://localhost:3001/moduleYt",{courseId}).then((res)=>{
+    //             console.log(res);
+                
+    //         }).catch((err)=>{
+    //             console.log(err);
+    //         })
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // };
 
     return(<div>
         {/* 31 111 53 */}
@@ -27,7 +43,12 @@ export const AllCourses=()=>{
                                     <h2>{data.topicName}</h2>
                                     {/* <p>{data.compName}</p> */}
                                     <p>Duration: {data.duration}</p>
-                                    <button >View Course</button>
+                                    <Link to={"/ytcoursemodule/"+ data.courseId }>
+                                        <button > 
+                                            {/* onClick={(e)=>{butClick(data.courseId)}} */}
+                                        View Course
+                                        </button>
+                                    </Link>
                                 </div>
                             )
                         })

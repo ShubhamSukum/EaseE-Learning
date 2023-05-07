@@ -21,11 +21,12 @@ courseModelRouter.get("/moduleYt",async(req,res)=>{
         // console.log("err")
     }
 })
-courseModelRouter.get("/moduleYt:courseId",async(req,res)=>{
+
+courseModelRouter.post("/moduleYt",async(req,res)=>{
     try{
         // console.log("up")    // testing
-        const courseId = req.params.courseId
-        const module=await courseYtModel.find();
+        const courseId = req.body.courseId;
+        const module=await courseYtModel.find({courseId});
         // console.log("middle")
         res.json(module);   
         // console.log("down")
