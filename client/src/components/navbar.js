@@ -8,9 +8,9 @@ export const Navbar = () => {
 
     const navigate = useNavigate();
 
-    const logout = () => {
-        setCookies("access_token", "");
-        window.localStorage.removeItem("userId");
+    const logout=()=>{
+        setCookies("access_token","");
+        localStorage.removeItem("userID");   
         console.log("Executed!!")
         navigate("/login")
     };

@@ -7,6 +7,7 @@ import { userRouter } from "./routes/users.js";
 import { homeRouter } from "./routes/home.js"
 import { testiRouter } from "./routes/testimonials.js";
 import { coursesRouter } from "./routes/courses.js"
+import { courseModelRouter } from "./routes/courseModule.js"
 
 const app=express();
 
@@ -18,6 +19,7 @@ app.use(userRouter);
 app.use(homeRouter);
 app.use(testiRouter);
 app.use(coursesRouter);
+app.use(courseModelRouter);
 
 // Database Connection
 mongoose.connect(
