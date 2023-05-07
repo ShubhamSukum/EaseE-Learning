@@ -190,7 +190,9 @@ a:hover {
 
 .logoStyle{
   margin: 30px 20px;
-  height: 100px;
+  /* height: 100px; */
+  height: 30vh;
+  width: 30vh;
   margin-left: 200px !important;
 }
 

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import '../App.css'
+import logo from '../images/logoBG.png';
+import {Link} from "react-router-dom";
 
 export const Home = () => {
     const [category, allCatergory] = useState([]);
@@ -24,8 +26,8 @@ export const Home = () => {
             <section>
                 <div className="headings">
                     <img src={logo} alt="logo" className="logoStyle" ></img>
-                    <h1 style={{ color: "black" }}> EaseE-LEARNING</h1>
-                    <h1>Empowering Education with Effortless Course Management</h1>
+                    <h1 style={{ color: "black" , marginBottom: "5vh"}}> EaseE-LEARNING</h1>
+                    <h1 style={{ marginBottom: "10vh" }}>Empowering Education with Effortless Course Management</h1>
                     <p>We're simplifying learning with our intuitive course management system.</p>
                     <button>CHECK OUR COURSE CATAGORIES</button>
                 </div>
