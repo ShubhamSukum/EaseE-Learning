@@ -163,7 +163,6 @@ a:hover {
 }
 
 .headings h1 {
-  padding-top: 20px;
   font-size: 80px;
   line-height: 1em;
   letter-spacing: -3px;
@@ -187,6 +186,12 @@ a:hover {
   font-weight: bold;
   border-radius: 3px;
   margin-bottom: 150px;
+}
+
+.logoStyle{
+  margin: 30px 20px;
+  height: 100px;
+  margin-left: 200px !important;
 }
 
 
