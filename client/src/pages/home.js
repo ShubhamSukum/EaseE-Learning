@@ -58,7 +58,7 @@ export const Home = () => {
                             testi.map((t, index) => {
                                 return (
                                     <div key={index} className="test-data">
-                                        <h2 >{t.judge}</h2>
+                                        <h2>{t.judge}</h2><br />
                                         <p>{t.words}</p>
                                     </div>
                                 )
