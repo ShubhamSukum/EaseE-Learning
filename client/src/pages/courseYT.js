@@ -15,31 +15,49 @@ export const YtCourse=()=>{
         })
     },[params.ytcourse]);
 
-    return(<div>
-        {
-            ytCourse.map((info,index)=>{
-                return(
-                    <div key={index}>
-                        <p>Topic Name == {info.topicName}</p>
+    return(
+        <>
+            {/* Video */}
+            {
+                ytCourse.map((info,index)=>{
 
+                    return(
+                        <div  key={index} >
+                                <p>Topic Name == {info.topicName}</p> 
+                                <p>Instructor Name == {info.instructor}</p>
+                                <p>Instructor Info == {info.instructorInfo}</p>
+                                <img src={info.instructorDp} style={{width:"10vw",height:"10vw"}}/>
+                                <p>Enrolled == {info.enrolled}</p>
+                        </div>
+                    )
+                })
+            }
+
+            {/* modules */}
+
+            {
+                ytCourse.map((info,index)=>{
+
+                    return(
+                        <div key={index}>
                             {
                                 info.Module.map((i,index)=>{
                                     return(
-                                        <div key={index}>
+                                        <div key={index} style={{marginTop:"10vh"}}>
                                             <h5>Module No == {i.moduleNo}</h5>
                                             <h5>Module Name == {i.moduleName}</h5>
                                             <h5>Module Link == {i.moduleLink}</h5>
+                                            <iframe width={"420"} height={"345"} src={i.moduleLink} key={index}></iframe>
                                         </div>
                                     )
                                 })
                             }
-                            
-                        <p>Instructor Name == {info.instructor}</p>
-                        <p>Instructor Info == {info.instructorInfo}</p>
-                        <p>Enrolled == {info.enrolled}</p>
-                    </div>)
-            })
-        }
-    </div>)
-}
+                        </div>
+                    )
+                })
+            }
 
+            
+        </>
+    )
+};

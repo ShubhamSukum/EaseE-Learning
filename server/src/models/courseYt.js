@@ -18,6 +18,10 @@ const courseYtSchema=mongoose.Schema({
         type:String,
         required:true
     },
+    instructorDp:{
+        type:String,
+        required:true
+    },
     enrolled:{  
         type:Number,
         required:true,
