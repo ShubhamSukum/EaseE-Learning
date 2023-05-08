@@ -22,7 +22,7 @@ export const YtCourse=()=>{
                 ytCourse.map((info,index)=>{
 
                     return(
-                        <div  key={index} >
+                        <div key={index} >
                                 <p>Topic Name == {info.topicName}</p> 
                                 <p>Instructor Name == {info.instructor}</p>
                                 <p>Instructor Info == {info.instructorInfo}</p>
