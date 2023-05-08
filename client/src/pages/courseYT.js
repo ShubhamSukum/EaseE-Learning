@@ -4,21 +4,26 @@ import { useParams } from "react-router-dom";
 
 export const YtCourse=()=>{
     const [ytCourse,setYtCourse]=useState([]);
+    const [curModule,setCurModule]=useState([]);
+
     const params=useParams();
     // console.log(params.ytcourse)
 
     useEffect(()=>{
-        axios.post("http://localhost:3001/moduleYt",{courseId:params.ytcourse}).then((res)=>{
-            setYtCourse(res.data);
+        axios.post("http://localhost:3001/displayvideo",{courseId:params.ytcourse}).then((res)=>{
+            console.log(res);
+            setYtCourse([res.data]);
         }).catch((err)=>{
             console.err(err);
         })
     },[params.ytcourse]);
 
+
+
     return(
         <>
             {/* Video */}
-            {
+            {/* {
                 ytCourse.map((info,index)=>{
 
                     return(
@@ -31,7 +36,7 @@ export const YtCourse=()=>{
                         </div>
                     )
                 })
-            }
+            } */}
 
             {/* modules */}
 
@@ -39,20 +44,33 @@ export const YtCourse=()=>{
                 ytCourse.map((info,index)=>{
 
                     return(
-                        <div key={index}>
-                            {
-                                info.Module.map((i,index)=>{
-                                    return(
-                                        <div key={index} style={{marginTop:"10vh"}}>
-                                            <h5>Module No == {i.moduleNo}</h5>
-                                            <h5>Module Name == {i.moduleName}</h5>
-                                            <h5>Module Link == {i.moduleLink}</h5>
-                                            <iframe width={"420"} height={"345"} src={i.moduleLink} key={index}></iframe>
-                                        </div>
-                                    )
+                        <>
+                        {
+                            info.Module.map((i,index)=>{
+                                return(<>
+                                    <div className="sad">
+                                        
+                                    </div>
+                                </>)
                                 })
-                            }
-                        </div>
+                        }
+                            
+
+                            <div key={index}>
+                                {
+                                    info.Module.map((i,index)=>{
+                                        return(
+                                            <div key={index} style={{marginTop:"10vh"}}>
+                                                <h5>Module No == {i.moduleNo}</h5>
+                                                <h5>Module Name == {i.moduleName}</h5>
+                                                <h5>Module Link == {i.moduleLink}</h5>
+                                                <iframe width={"420"} height={"345"} src={i.moduleLink} key={index}></iframe>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </>
                     )
                 })
             }
