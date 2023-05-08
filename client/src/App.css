@@ -382,3 +382,51 @@ h1 {
     margin-top: 100px;
   }
 }
+
+/* ///////////////////////////////// COURSEYT STYLING/////////////////////////////////  */
+
+embed {
+  width: 90%;
+  height: 400px;
+}
+
+.main {
+  display: flex;
+}
+
+.right {
+  /* width: 60%; */
+  border-right: 1px solid black;
+}
+
+.left {
+  /* width: 40%; */
+  text-align: center;
+}
+
+.left ul {
+  list-style: none;
+}
+
+.left ul li {
+  height: 50px;
+}
+
+.videos {
+  margin-left: 10%;
+}
+
+.instructor {
+  display: flex;
+}
+
+.instructor-img {
+  margin-left: 100px;
+  border-radius: 50%;
+  height: 80%;
+  width: 50%;
+}
+
+.instructor-info {
+  width: 40%;
+}
