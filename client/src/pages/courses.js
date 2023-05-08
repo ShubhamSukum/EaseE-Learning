@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+
 
 export const Courses = () => {
     const params = useParams();
@@ -34,7 +35,12 @@ export const Courses = () => {
                                     <h2>{data.topicName}</h2>
                                     {/* <p>{data.compName}</p> */}
                                     <p>Duration: {data.duration}</p>
-                                    <button >View Course</button>
+                                    <Link to={"/ytcoursemodule/"+ data.courseId }>
+                                        <button > 
+                                            {/* onClick={(e)=>{butClick(data.courseId)}} */}
+                                        View Course
+                                        </button>
+                                    </Link>
                                 </div>
                             )
                         })

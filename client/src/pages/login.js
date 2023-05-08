@@ -35,7 +35,7 @@ export const Login = () => {
         <div className="center">
 
             <h1 >Login</h1>
-            <i class="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
+            <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
 
             <form onSubmit={onSubmit}>
 

@@ -20,23 +20,23 @@ export const YtCourse=()=>{
             ytCourse.map((info,index)=>{
                 return(
                     <div key={index}>
-                        <p>{info.topicName}</p>
+                        <p>Topic Name == {info.topicName}</p>
 
                             {
                                 info.Module.map((i,index)=>{
                                     return(
                                         <div key={index}>
-                                            <h5>{i.moduleNo}</h5>
-                                            <h5>{i.moduleName}</h5>
-                                            <h5>{i.moduleLink}</h5>
+                                            <h5>Module No == {i.moduleNo}</h5>
+                                            <h5>Module Name == {i.moduleName}</h5>
+                                            <h5>Module Link == {i.moduleLink}</h5>
                                         </div>
                                     )
                                 })
                             }
                             
-                        <p>{info.instructor}</p>
-                        <p>{info.instructorInfo}</p>
-                        <p>{info.enrolled}</p>
+                        <p>Instructor Name == {info.instructor}</p>
+                        <p>Instructor Info == {info.instructorInfo}</p>
+                        <p>Enrolled == {info.enrolled}</p>
                     </div>)
             })
         }
