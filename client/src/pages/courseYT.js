@@ -187,7 +187,7 @@ export const YtCourse = () => {
                         <iframe title="video" src={video} frameborder="0" allowfullscreen></iframe>
                     </div>
                     
-                    <hr />
+                    <hr className="videoHr"/>
 
                     {ytCourse.map((info, index) => {
                         return (

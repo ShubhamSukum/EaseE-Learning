@@ -10,6 +10,10 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+button{
+  cursor: pointer;
+}
+
 /* Login and Signup Page styling */
 
 .center {
@@ -397,12 +401,17 @@ iframe {
 
 .right {
   width: 60%;
-  box-shadow: 0 0 20px 0px #aaa;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 7px 0px #aaa;
 }
 
 .left {
+  box-shadow: 0 0 7px 0px #aaa;
   width: 40%;
   padding: 1rem;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .left ul {
@@ -421,6 +430,13 @@ iframe {
 
 .left ul li:hover {
   color: #0082e6;
+}
+
+.videoHr {
+  border: 0;
+  height: 10px;
+  background: #000;
+  opacity: 0.1;
 }
 
 .videos {
