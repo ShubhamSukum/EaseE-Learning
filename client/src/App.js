@@ -26,7 +26,12 @@ function App() {
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/component/:compName" element={<Courses/>}/> 
-            <Route path="/allcourses" element={<AllCourses/>}/>
+
+            <Route path="/allcourses" element={
+            <ProtectedRoute>
+              <AllCourses/>
+            </ProtectedRoute>}/>
+
             <Route path="/ytcoursemodule/:ytcourse" element={<YtCourse/>}/>
 
             {/* // element = {FunctionPage code}  should be in Pascal Case camelCase 
@@ -41,6 +46,9 @@ function App() {
               <Home />
             </ProtectedRoute>
           }/>
+
+
+
           {/* <Home/> */}
           {/* </ProtectedRoute> */}
           {/* <ProtectedRoute to="/courses"> */}
