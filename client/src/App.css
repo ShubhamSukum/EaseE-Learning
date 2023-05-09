@@ -385,39 +385,52 @@ h1 {
 
 /* ///////////////////////////////// COURSEYT STYLING/////////////////////////////////  */
 
-embed {
+iframe {
   width: 90%;
   height: 400px;
 }
 
 .main {
   display: flex;
+  width: 100%;
 }
 
 .right {
-  /* width: 60%; */
-  border-right: 1px solid black;
+  width: 60%;
+  box-shadow: 0 0 20px 0px #aaa;
 }
 
 .left {
-  /* width: 40%; */
-  text-align: center;
+  width: 40%;
+  padding: 1rem;
 }
 
 .left ul {
   list-style: none;
 }
 
+.modulie{
+  margin-top: 50px;
+}
+
 .left ul li {
-  height: 50px;
+  margin-top: 15px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.left ul li:hover {
+  color: #0082e6;
 }
 
 .videos {
-  margin-left: 10%;
+  margin: 5%;
 }
 
 .instructor {
   display: flex;
+  width: 100%;
+  margin: 5%;
 }
 
 .instructor-img {
@@ -431,10 +444,8 @@ embed {
   width: 40%;
 }
 
-.sad{
-  height:50vh;
-  width:50vw;
-  border:2px solid black;
-  margin-top: 10vh;
-  margin-left: 50vh;
+.fa-youtube-play{
+  color: red;
+  font-size: 20px;
+  margin-right: 10px;
 }
