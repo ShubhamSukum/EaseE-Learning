@@ -4,19 +4,25 @@ import { useParams } from "react-router-dom";
 
 export const YtCourse=()=>{
     const [ytCourse,setYtCourse]=useState([]);
-    const [curModule,setCurModule]=useState([]);
+    // const [curModule,setCurModule]=useState([]);
+    const [clicked,onClicked]=useState([]);
+    const [modu,setModu]=useState([]);
 
     const params=useParams();
     // console.log(params.ytcourse)
 
     useEffect(()=>{
-        axios.post("http://localhost:3001/displayvideo",{courseId:params.ytcourse}).then((res)=>{
-            console.log(res);
-            setYtCourse([res.data]);
+        axios.post("http://localhost:3001/moduleYt",{courseId:params.ytcourse}).then((res)=>{
+            // console.log(res);
+            setYtCourse(res.data);  
         }).catch((err)=>{
             console.err(err);
         })
     },[params.ytcourse]);
+
+    // useEffect(()=>{
+    //     axios.post("http://localhost:3001/displayvideo",{courseId:params.ytcourse,moduleNo})
+    // },[params.ytcourse,moduleNo]);
 
 
 
@@ -44,8 +50,8 @@ export const YtCourse=()=>{
                 ytCourse.map((info,index)=>{
 
                     return(
-                        <>
-                        {
+                        <div key={index}>
+                        {/* {
                             info.Module.map((i,index)=>{
                                 return(<>
                                     <div className="sad">
@@ -53,24 +59,48 @@ export const YtCourse=()=>{
                                     </div>
                                 </>)
                                 })
-                        }
+                        } */}
                             
 
                             <div key={index}>
                                 {
                                     info.Module.map((i,index)=>{
+                                        // const clicked=(link)=>{
+                                        //     try{
+                                        //         onClicked(link);
+                                        //         console.log(link)
+                                        //     }catch(err){
+                                        //         console.log(err);
+                                        //     }
+                                            
+                                        // }
+
+                                        // const funClick=async()=>{
+                                        //     await setModu(i.moduleNo);
+                                        // }
+
                                         return(
-                                            <div key={index} style={{marginTop:"10vh"}}>
+                                            <div
+                                                key={index}
+                                                style={{ marginTop: "10vh", border: "1px solid black",cursor:"pointer"}}
+                                                onClick={() => {
+                                                    setModu(i.moduleNo);
+                                                    onClicked(i.moduleLink);
+                                                    
+                                                    console.log(clicked);
+                                                    console.log(modu)
+                                                }}
+                                            >
+                                                <h2>Topic Name ** {info.topicName}</h2>
                                                 <h5>Module No == {i.moduleNo}</h5>
                                                 <h5>Module Name == {i.moduleName}</h5>
-                                                <h5>Module Link == {i.moduleLink}</h5>
-                                                <iframe width={"420"} height={"345"} src={i.moduleLink} key={index}></iframe>
                                             </div>
                                         )
                                     })
                                 }
                             </div>
-                        </>
+
+                        </div>
                     )
                 })
             }

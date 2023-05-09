@@ -19,7 +19,7 @@ displayVideoRouter.post("/displayvideo",async(req, res)=>{
         const module = course.Module.find(m => m.moduleNo === moduleNo);
         const moduleLink = module.moduleLink;
         console.log(moduleLink);
-        res.json(moduleLink)
+        res.json(moduleLink);
     }).catch(err => {
         console.log(err);
         res.json(err)

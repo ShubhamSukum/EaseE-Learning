@@ -8,19 +8,19 @@ app.use(express.json());
 
 const courseModelRouter=express.Router();
 
-courseModelRouter.get("/moduleYt",async(req,res)=>{
-    try{
-        // console.log("up")    // testing
-        const module=await courseYtModel.find();
-        // console.log("middle")
-        res.json(module);   
-        // console.log("down")
-    }catch(err){
-        // console.log("err")
-        res.json(err);
-        // console.log("err")
-    }
-})
+// courseModelRouter.get("/moduleYt",async(req,res)=>{
+//     try{
+//         // console.log("up")    // testing
+//         const module=await courseYtModel.find();
+//         // console.log("middle")
+//         res.json(module);   
+//         // console.log("down")
+//     }catch(err){
+//         // console.log("err")
+//         res.json(err);
+//         // console.log("err")
+//     }
+// })
 
 courseModelRouter.post("/moduleYt",async(req,res)=>{
     try{
