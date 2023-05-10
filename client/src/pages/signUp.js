@@ -196,7 +196,7 @@ export const SignUp = () => {
 
         <div className="center" id="goUP">
             <h1>Sign UP</h1>
-            <i class="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
+            <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     {/* <label htmlFor="Name">Name</label> */}
@@ -231,7 +231,7 @@ export const SignUp = () => {
 
                 <div className="form-group">
                     {/* <label htmlFor="Mobile">Mobile Number</label> */}
-                    <input type="text" placeholder="Enter Mobile Number"
+                    <input type="number" placeholder="Enter Mobile Number"
                         value={mobile} onChange={(event) => setmobile(event.target.value)} />
                 </div>
 

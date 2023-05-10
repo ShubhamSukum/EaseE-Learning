@@ -181,18 +181,18 @@ export const YtCourse = () => {
 
     return (
         <>
-            <div class="main">
-                <div class="right">
-                    <div class="videos">
-                        <iframe title="video" src={video} frameborder="0" allowfullscreen></iframe>
+            <div className="main">
+                <div className="right">
+                    <div className="videos">
+                        <iframe title="video" src={video} frameBorder="0" allowFullScreen></iframe>
                     </div>
                     
                     <hr className="videoHr"/>
 
                     {ytCourse.map((info, index) => {
                         return (
-                            <div class="instructor">
-                                <div style={{ width: "50%" }} key={index}>
+                            <div className="instructor" key={index}>
+                                <div style={{ width: "50%" }} >
 
                                     <img
                                         src={info.instructorDp}
@@ -201,8 +201,8 @@ export const YtCourse = () => {
                                     />
 
                                 </div>
-                                <div class="instructor-info">
-                                    <h2>{info.topicName}</h2>
+                                <div className="instructor-info">
+                                    <h2>{info.instructorInfo}</h2>
                                     
                                 </div>
                             </div>
@@ -217,14 +217,14 @@ export const YtCourse = () => {
                             return (
                                 info.Module.map((i, index) => {
                                     return (
-                                        <ul>
+                                        <ul key={index}>
                                             <li onClick={() => {
                                                 onClicked(i);
                                                 setVideo(i.moduleLink);
                                             }}
                                             >
                                                 <p>
-                                                    <span> <i class="fa fa-youtube-play" aria-hidden="true"></i> </span>
+                                                    <span> <i className="fa fa-youtube-play" aria-hidden="true"></i> </span>
                                                     {i.moduleNo}. {i.moduleName}
                                                 </p>
                                             </li>
