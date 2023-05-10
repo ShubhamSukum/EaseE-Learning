@@ -221,7 +221,7 @@ export const SignUp = () => {
                         <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword"
                             value={confirmPass} onKeyUp={confirmPassword} onChange={(event) => setconfirmPass(event.target.value)} />
                     </div>
-                    <small id="cpassError" style={{ color: "red", visibility: "hidden" }}></small>
+                    <small id="cpassError" style={{ color: "red", visibility: "hidden", paddingLeft: "10px" }}></small>
 
                     <div className="form-group">
                         {/* <label htmlFor="College">College</label> */}
