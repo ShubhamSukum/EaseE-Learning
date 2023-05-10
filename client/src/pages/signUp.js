@@ -11,11 +11,11 @@ export const SignUp = () => {
     const [college, setcollege] = useState("");
     const [mobile, setmobile] = useState("");
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        
+
 
         try {
             await axios.post("http://localhost:3001/signup", { name, username, password, confirmPass, college, mobile })
@@ -170,76 +170,76 @@ export const SignUp = () => {
     return (
         <>
 
-<center id="passDiv" style={{display:"none"}}>
-        <fieldset style={{width: "95%"}}>
-            <ul style={{width: "fit-content", margin:"0 auto"}}>
+            <center id="passDiv" style={{ display: "none" }}>
+                <fieldset style={{ width: "95%" }}>
+                    <ul style={{ width: "fit-content", margin: "0 auto" }}>
 
-                <li>
-                    <div style={{textAlign: "left"}} id="passNumber">Password should contain at-least 1 number</div>
-                </li>
-                <li>
-                    <div style={{textAlign: "left"}} id="passLetter">Password should contain at-least one uppercase letter
+                        <li>
+                            <div style={{ textAlign: "left" }} id="passNumber">Password should contain at-least 1 number</div>
+                        </li>
+                        <li>
+                            <div style={{ textAlign: "left" }} id="passLetter">Password should contain at-least one uppercase letter
+                            </div>
+                        </li>
+                        <li>
+                            <div style={{ textAlign: "left" }} id="passSpecial">Password should contain at-least 1 special character
+                            </div>
+                        </li>
+                        <li>
+                            <div style={{ textAlign: "left" }} id="passLength">Length of password should be minimum 8 characters
+                            </div>
+                        </li>
+
+                    </ul>
+                </fieldset>
+            </center>
+
+            <div className="center" id="goUP">
+                <h1>Sign UP</h1>
+                <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
+                <form onSubmit={onSubmit}>
+                    <div className="form-group">
+                        {/* <label htmlFor="Name">Name</label> */}
+                        <input type="text" placeholder="Enter Name"
+                            value={name} onChange={(event) => setName(event.target.value)} />
                     </div>
-                </li>
-                <li>
-                    <div style={{textAlign: "left"}} id="passSpecial">Password should contain at-least 1 special character
+
+                    <div className="form-group">
+                        {/* <label htmlFor="Username">Username</label> */}
+                        <input type="text" placeholder="Enter Username"
+                            value={username} onChange={(event) => setUsername(event.target.value)} />
                     </div>
-                </li>
-                <li>
-                    <div style={{textAlign: "left"}} id="passLength">Length of password should be minimum 8 characters
+
+                    <div className="form-group">
+                        {/* <label htmlFor="Password">Password</label> */}
+                        <input type="password" placeholder="Enter Password" name="password" id="password"
+                            value={password} onKeyUp={validatePassword} onChange={(event) => setpassword(event.target.value)} />
                     </div>
-                </li>
 
-            </ul>
-        </fieldset>
-    </center>
+                    <div className="form-group">
+                        {/* <label htmlFor="Confirm Password">Confirm Password</label> */}
+                        <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword"
+                            value={confirmPass} onKeyUp={confirmPassword} onChange={(event) => setconfirmPass(event.target.value)} />
+                    </div>
+                    <small id="cpassError" style={{ color: "red", visibility: "hidden" }}></small>
 
-        <div className="center" id="goUP">
-            <h1>Sign UP</h1>
-            <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
-            <form onSubmit={onSubmit}>
-                <div className="form-group">
-                    {/* <label htmlFor="Name">Name</label> */}
-                    <input type="text" placeholder="Enter Name"
-                        value={name} onChange={(event) => setName(event.target.value)} />
-                </div>
+                    <div className="form-group">
+                        {/* <label htmlFor="College">College</label> */}
+                        <input type="text" placeholder="Enter College"
+                            value={college} onChange={(event) => setcollege(event.target.value)} />
+                    </div>
 
-                <div className="form-group">
-                    {/* <label htmlFor="Username">Username</label> */}
-                    <input type="text" placeholder="Enter Username"
-                        value={username} onChange={(event) => setUsername(event.target.value)} />
-                </div>
+                    <div className="form-group">
+                        {/* <label htmlFor="Mobile">Mobile Number</label> */}
+                        <input type="number" placeholder="Enter Mobile Number"
+                            value={mobile} onChange={(event) => setmobile(event.target.value)} />
+                    </div>
 
-                <div className="form-group">
-                    {/* <label htmlFor="Password">Password</label> */}
-                    <input type="password" placeholder="Enter Password" name="password" id="password"
-                        value={password} onKeyUp={validatePassword} onChange={(event) => setpassword(event.target.value)} />
-                </div>
-
-                <div className="form-group">
-                    {/* <label htmlFor="Confirm Password">Confirm Password</label> */}
-                    <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword"
-                        value={confirmPass} onKeyUp={confirmPassword} onChange={(event) => setconfirmPass(event.target.value)} />
-                </div>
-                <small id="cpassError" style={{color: "red",visibility: "hidden"}}></small>
-
-                <div className="form-group">
-                    {/* <label htmlFor="College">College</label> */}
-                    <input type="text" placeholder="Enter College"
-                        value={college} onChange={(event) => setcollege(event.target.value)} />
-                </div>
-
-                <div className="form-group">
-                    {/* <label htmlFor="Mobile">Mobile Number</label> */}
-                    <input type="number" placeholder="Enter Mobile Number"
-                        value={mobile} onChange={(event) => setmobile(event.target.value)} />
-                </div>
-
-                <button type="submit" id="signUP-Button">Sign Up</button>
-                <br />
-                <p className="Login-direct">Already Have an Account: </p>
-                <p><Link to="/login" className="Login-direct">Login</Link></p>
-            </form>
-        </div></>
+                    <button type="submit" id="signUP-Button">Sign Up</button>
+                    <br />
+                    <p className="Login-direct">Already Have an Account: </p>
+                    <p><Link to="/login" className="Login-direct">Login</Link></p>
+                </form>
+            </div></>
     )
 };
