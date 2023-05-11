@@ -9,6 +9,7 @@ import { testiRouter } from "./routes/testimonials.js";
 import { coursesRouter } from "./routes/courses.js"
 import { courseModelRouter } from "./routes/courseModule.js"
 import { displayVideoRouter } from "./routes/displayVideo.js";
+import { adminRouter } from "./routes/adminRoute.js"
 
 const app=express();
 
@@ -22,6 +23,7 @@ app.use(testiRouter);
 app.use(coursesRouter);
 app.use(courseModelRouter);
 app.use(displayVideoRouter);
+app.use(adminRouter);
 
 // Database Connection
 mongoose.connect(
