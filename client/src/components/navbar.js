@@ -30,17 +30,13 @@ export const Navbar = () => {
     return (
         <>
             <nav>
+                
                 <input type="checkbox" id="check" />
                 <label htmlFor="check" className="checkbtn">
                     <i className="fa fa-bars"></i>
                 </label>
 
                 <Link to="/"><label className="logo">EaseE-Learning</label></Link>
-                
-                <ul>
-                    <li><Link to="/" className="link"> Home </Link></li>
-                    <li><Link to="/allcourses" className="link">Courses</Link></li>
-                </ul>
 
                 {
                     !ourCookie?
@@ -56,26 +52,12 @@ export const Navbar = () => {
                             </ul>
                         )
                 }
+                
+                <ul>
+                    <li><Link to="/" className="link"> Home </Link></li>
+                    <li><Link to="/allcourses" className="link">Courses</Link></li>
+                </ul>
 
-                {/* Comments */}
-
-                {/* <Link to="/signup" className="link"> Sign Up </Link>
-            <Link to="/login" className="link"> Login </Link> */}
-
-                {/* {
-            !cookies["access_token"]?
-            (
-                <div>
-                    <Link to="/login" className="link"> Home </Link>
-                    <Link to="/login" className="link">Courses</Link>
-                </div>
-            ):(
-                <div>
-                    <Link to="/" className="link"> Home </Link>
-                    <Link to="/courses" className="link">Courses</Link>
-                </div>
-            )
-        } */}
             </nav>
         </>
     )

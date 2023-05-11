@@ -8,10 +8,7 @@ import {AllCourses} from "./pages/allCourses"
 import {YtCourse} from "./pages/courseYT";
 
 import Cookies from "js-cookie";
-// import { refresh } from "./http/apis";
-// import Cookies from "js-cookie";
-// import { useState, useEffect } from "react";
-// import {ProtectedRoute} from ""
+// import comments  
 import {Navbar} from "./components/navbar";
 import { useEffect, useState } from 'react';
 
@@ -25,7 +22,9 @@ function App() {
         <Routes>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/component/:compName" element={<Courses/>}/> 
+            <Route path="/component/:compName" element={<ProtectedRoute>
+              <Courses/>
+            </ProtectedRoute>}/> 
 
             <Route path="/allcourses" element={
             <ProtectedRoute>
@@ -41,29 +40,13 @@ function App() {
             USE PascalCase DON'T USE camelCase */}
 
             {/* <ProtectedRoute path="/"> */}
+
           <Route path="/" element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
           }/>
-
-
-
-          {/* <Home/> */}
-          {/* </ProtectedRoute> */}
-          {/* <ProtectedRoute to="/courses"> */}
-          {/* <Route path="/courses" element={
-            <ProtectedRoute>
-              <Courses/>
-            </ProtectedRoute>
-          }/> */}
-
-          {/* <Route path="/allCourses" element={
-            <ProtectedRoute>
-              <allCourses/>
-            </ProtectedRoute>
-          }/> */}
-          {/* </ProtectedRoute> */}
+          
         </Routes>
       </Router>
     </div>
@@ -72,25 +55,45 @@ function App() {
 
 const ProtectedRoute = ({ children, ...rest }) => {
   const [isUnauthorized, setIsUnauthorized] = useState(false);
+
   useEffect(() => {
       if (!Cookies.get("access_token")) {
         setIsUnauthorized(true)
-        // (async () => {
-        //   try {
-        //         console.log(Cookies.get("access_token").length)
-        //           console.log("Calling in Protected Route.....");
-        //       } catch (err) {
-        //           console.log(err);
-        //           setIsUnauthorized(true);
-        //       }
-        //   })();
+        // comment 1
       }
   }, []);
+
   if (isUnauthorized) {
     return <Navigate to="/login" />
   }
+
   return children
-  // return (
+        // comment 2
+};
+
+export default App;
+
+
+/* comment 0 */
+
+
+
+
+// comment 1
+
+// (async () => {
+//   try {
+//         console.log(Cookies.get("access_token").length)
+//           console.log("Calling in Protected Route.....");
+//       } catch (err) {
+//           console.log(err);
+//           setIsUnauthorized(true);
+//       }
+//   })();
+
+// comment 2
+
+// return (
   //     <Route
   //         {...rest}
   //         render={({ location }) => {
@@ -102,6 +105,10 @@ const ProtectedRoute = ({ children, ...rest }) => {
   //         }}
   //     ></Route>
   // );
-};
 
-export default App;
+// import comments
+
+// import { refresh } from "./http/apis";
+// import Cookies from "js-cookie";
+// import { useState, useEffect } from "react";
+// import {ProtectedRoute} from ""

@@ -25,7 +25,14 @@ displayVideoRouter.post("/displayvideo",async(req, res)=>{
         res.json(err)
     });
     
-    // try{
+    // comment
+})
+
+export {displayVideoRouter};
+
+// comment
+
+// try{
     //     // console.log("try")
     //     // const value=await courseYtModel.findOne({courseId});
     //     // console.log(value)
@@ -42,7 +49,3 @@ displayVideoRouter.post("/displayvideo",async(req, res)=>{
     // }catch(err){
     //     res.json(err);
     // }
-})
-
-export {displayVideoRouter};
-
