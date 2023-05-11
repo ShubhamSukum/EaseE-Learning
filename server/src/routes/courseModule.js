@@ -24,6 +24,19 @@ courseModelRouter.post("/moduleYt",async(req,res)=>{
         // console.log("err")
     }
 })
+
+courseModelRouter.post("/createModule",async(req,res)=>{
+    try{
+        const {courseId,topicName,Module,instructor,instructorInfo,instructorDp,enrolled}=req.body;
+        const newModule=new courseYtModel({courseId,topicName,Module,instructor,instructorInfo,instructorDp,enrolled});
+        await newModule.save();
+        
+        res.json({message:"Yt module created!!"});
+    }catch(err){
+        res.json(err);
+    }
+});
+
 export {courseModelRouter};
 
 

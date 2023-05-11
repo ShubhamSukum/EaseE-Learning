@@ -26,15 +26,19 @@ app.use(displayVideoRouter);
 app.use(adminRouter);
 
 // Database Connection
-mongoose.connect(
+const dbConnect=mongoose.connect(
     "mongodb+srv://EaseE:learning@coursemanagementsystem.0e6ivsq.mongodb.net/EaseE?retryWrites=true&w=majority",
     {
         useNewUrlParser:true,
         useUnifiedTopology:true,
     }
-);
-
-// Checking if server is running properly
-app.listen(3001,()=>{
-    console.log("OUR SERVER IS RUNNING!!");
+).then(()=>{
+    console.log("database connected!!");
+    
+    app.listen(3001,()=>{
+        console.log("OUR SERVER IS RUNNING!!");
+    });
+}).catch((error)=>{
+    console.log("Connection Failed !!");
+    console.log(error);
 });
