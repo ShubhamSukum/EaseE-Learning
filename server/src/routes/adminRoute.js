@@ -14,7 +14,7 @@ adminRouter.get("/getAdmin",async(req,res)=>{
         const data=await adminModel.find({});
         res.json(data);
     }catch(err){
-        res.json(err)
+        res.json(err);
     }
 });
 
@@ -22,7 +22,7 @@ adminRouter.post("/createAdmin",async(req,res)=>{
     try{
         // Checking if user already exist
         const {adminName,adminPassword} = req.body;
-        const exist=await adminModel.findOne({adminName:adminName});
+        const exist=await adminModel.findOne({adminName});
         if(exist){
             return res.json({message:"Admin is already registered!!"});
         }
