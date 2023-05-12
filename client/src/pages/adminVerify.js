@@ -27,10 +27,12 @@ export const AdminVerification=()=>{
     
         return(
         <>
-            <div className="center">
+            <div className="center" id="verify">
 
-            <h1>Verfication</h1>
-                <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
+                <h1>Verfication</h1>
+                
+                <i className="fa fa-user-circle" aria-hidden="true" 
+                style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
 
                 <form onSubmit={onSubmit}>
                     <input type="password" placeholder="Enter Verfication Code" 

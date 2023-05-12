@@ -17,15 +17,15 @@ button{
 /* Login and Signup Page styling */
 
 .center {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px;
-  padding: 30px 45px 50px;
-  box-shadow: 0 0 6px grey;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 30px 45px;
+    box-shadow: 0 0 6px grey;
 }
 
 .center h1 {
@@ -464,4 +464,31 @@ iframe {
   color: red;
   font-size: 20px;
   margin-right: 10px;
+}
+
+/* Admin Panel CSS */
+
+#admin-panel button{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+}
+
+#admin-panel{
+  margin-top: 50px;
+}
+
+#verify {
+  display: flex;
+  padding-right: 50px;
+  align-items: center;
 }
