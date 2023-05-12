@@ -1,11 +1,12 @@
 import './App.css';
-import {BrowserRouter as Router,Routes,Route, Navigate} from "react-router-dom";
+import {BrowserRouter as Router,Routes,Route,Navigate} from "react-router-dom";
 import {Home} from "./pages/home";
 import {SignUp} from "./pages/signUp";
 import {Courses} from "./pages/courses";
 import {Login} from "./pages/login";
 import {AllCourses} from "./pages/allCourses"
 import {YtCourse} from "./pages/courseYT";
+import {AdminPanel} from "./pages/adminPanel";
 
 import Cookies from "js-cookie";
 // import comments  
@@ -13,7 +14,6 @@ import {Navbar} from "./components/navbar";
 import { useEffect, useState } from 'react';
 
 function App() {
-  // const [cookies,setCookies]=useCookies(["access_token"]);
   return (
     <div className="App">
       <Router>
@@ -30,6 +30,8 @@ function App() {
             <ProtectedRoute>
               <AllCourses/>
             </ProtectedRoute>}/>
+
+            <Route path="/adminPanel" element={<AdminPanel/>}></Route>
 
             <Route path="/ytcoursemodule/:ytcourse" element={<YtCourse/>}/>
 
@@ -112,3 +114,5 @@ export default App;
 // import Cookies from "js-cookie";
 // import { useState, useEffect } from "react";
 // import {ProtectedRoute} from ""
+
+

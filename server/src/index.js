@@ -10,6 +10,7 @@ import { coursesRouter } from "./routes/courses.js"
 import { courseModelRouter } from "./routes/courseModule.js"
 import { displayVideoRouter } from "./routes/displayVideo.js";
 import { adminRouter } from "./routes/adminRoute.js"
+import {adminKeyRouter} from "./routes/adminKeysroute.js"
 
 const app=express();
 
@@ -24,6 +25,7 @@ app.use(coursesRouter);
 app.use(courseModelRouter);
 app.use(displayVideoRouter);
 app.use(adminRouter);
+app.use(adminKeyRouter);
 
 // Database Connection
 const dbConnect=mongoose.connect(
