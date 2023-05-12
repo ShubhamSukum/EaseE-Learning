@@ -28,6 +28,7 @@ courseModelRouter.post("/moduleYt",async(req,res)=>{
 courseModelRouter.post("/createModule",async(req,res)=>{
     try{
         const {courseId,topicName,Module,instructor,instructorInfo,instructorDp,enrolled}=req.body;
+
         const newModule=new courseYtModel({courseId,topicName,Module,instructor,instructorInfo,instructorDp,enrolled});
         await newModule.save();
         

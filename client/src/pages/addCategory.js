@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState,useEffect,useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
@@ -6,7 +6,15 @@ export const AddCategory=()=>{
     const [compName,setCompName]=useState([]);
     const [link,setLink] =useState([]);
 
+    const ref=useRef(null);
+
     const navigate=useNavigate();
+
+    useEffect(()=>{
+        if(ref.current){
+            ref.current?.focus();
+        }
+    },[ref]);
 
     const onSubmit=(e)=>{
         e.preventDefault();
@@ -28,7 +36,7 @@ export const AddCategory=()=>{
 
             <form onSubmit={onSubmit}>
 
-                <input type="text" placeholder="Enter Category Name"
+                <input type="text" placeholder="Enter Category Name" ref={ref}
                 onChange={(e)=>{setCompName(e.target.value)}}/>
 
                 <input type="text" placeholder="Link of Category Thumbnail"
