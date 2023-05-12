@@ -9,6 +9,9 @@ import {AllCourses} from "./pages/allCourses"
 import {YtCourse} from "./pages/courseYT";
 import {AdminVerification} from "./pages/adminVerify";
 import {AdminPanel} from "./pages/adminPanel";
+import {AddCategory} from "./pages/addCategory";
+import {AddCourse} from "./pages/addCourse";
+import {AddModule} from "./pages/addModule";
 
 import Cookies from "js-cookie";
 // import comments  
@@ -33,9 +36,17 @@ function App() {
               <AllCourses/>
             </ProtectedRoute>}/>
 
+            {/* Admin Routes */}
+
             <Route path="/adminVerify" element={<AdminVerification/>}></Route>
             <Route path="/adminPanel" element={<AdminPanel/>}></Route>
+            <Route path="/addCategory" element={<AddCategory/>}></Route>
+            <Route path="/addCourse" element={<AddCourse/>}></Route>
+            <Route path="/addModule" element={<AddModule/>}></Route>
 
+            {/* Admin Routes */}
+
+            
             <Route path="/ytcoursemodule/:ytcourse" element={<YtCourse/>}/>
 
             {/* // element = {FunctionPage code}  should be in Pascal Case camelCase 

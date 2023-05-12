@@ -9,9 +9,9 @@ export const AdminVerification=()=>{
 
     const onSubmit=(e)=>{
         e.preventDefault();
-        console.log(vKey);
+        // console.log(vKey);
         axios.post("http://localhost:3001/getKeys",{key:vKey}).then((res)=>{
-            console.log(res);
+            // console.log(res);
             if(res.data.valid==="ok")
             {
                 alert(res.data.message)
