@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import '../App.css';
+import "../App.css";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -17,9 +17,9 @@ export const Navbar = () => {
     }
   }, [cookies]);
 
-  const handleCtrlG = () => {
-    navigate("/adminPanel");
-  };
+  const handleCtrlG = useCallback(() => {
+    navigate("/adminVerify");
+  }, [navigate]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -34,7 +34,7 @@ export const Navbar = () => {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [handleCtrlG]);
 
   const logout = () => {
     removeCookie("access_token", { path: "/", domain: "localhost" });
@@ -93,74 +93,3 @@ export const Navbar = () => {
     </>
   );
 };
-
-
-
-// earlier code without ctrl+g == admin route
-
-// import { Link, useNavigate } from "react-router-dom";
-// import { useCookies } from "react-cookie";
-// import '../App.css';
-// import { useEffect, useState } from "react";
-
-// export const Navbar = () => {
-//     const [cookies, , removeCookie] = useCookies(["access_token"]);
-//     // console.log(cookies["access_token"]);
-
-//     const navigate = useNavigate();
-//     const [ourCookie, setOurCookie] = useState(false);
-
-
-//     useEffect(() => {
-//         // console.log("CHANGED....", cookies["access_token"])
-//         if(cookies["access_token"]) {
-//             setOurCookie(true)
-//         }
-//         else {
-//             setOurCookie(false)
-//         }
-//     }, [cookies])
-
-//     const logout=()=>{
-//         removeCookie("access_token", {path: "/", domain: "localhost"});
-//         localStorage.removeItem("userID");   
-//         // console.log("Executed!!")
-//         navigate("/login")
-//     };
-
-//     return (
-//         <>
-//             <nav>
-                
-//                 <input type="checkbox" id="check" />
-//                 <label htmlFor="check" className="checkbtn">
-//                     <i className="fa fa-bars"></i>
-//                 </label>
-
-//                 <Link to="/"><label className="logo">EaseE-Learning</label></Link>
-
-//                 {
-//                     !ourCookie?
-//                         (
-//                             <ul>
-//                                 <li><Link to="/signup" className="link"> Sign Up </Link></li>
-//                                 <li><Link to="/login" className="link"> Login </Link></li>
-//                             </ul>
-//                         ) :
-//                         (
-//                             <ul>
-//                                 <li><button onClick={logout} className="logout-btn">Logout</button></li>
-//                             </ul>
-//                         )
-//                 }
-                
-//                 <ul>
-//                     <li><Link to="/" className="link"> Home </Link></li>
-//                     <li><Link to="/allcourses" className="link">Courses</Link></li>
-//                 </ul>
-
-//             </nav>
-//         </>
-//     )
-// };
-

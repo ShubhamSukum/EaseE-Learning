@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const adminKeysSchema= new mongoose.Schema({
     key:{
-        type:String,
+        type:Number,
         unique:true,
         required:true
     }

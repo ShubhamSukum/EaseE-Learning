@@ -1,11 +1,13 @@
 import './App.css';
 import {BrowserRouter as Router,Routes,Route,Navigate} from "react-router-dom";
+
 import {Home} from "./pages/home";
 import {SignUp} from "./pages/signUp";
 import {Courses} from "./pages/courses";
 import {Login} from "./pages/login";
 import {AllCourses} from "./pages/allCourses"
 import {YtCourse} from "./pages/courseYT";
+import {AdminVerification} from "./pages/adminVerify";
 import {AdminPanel} from "./pages/adminPanel";
 
 import Cookies from "js-cookie";
@@ -31,6 +33,7 @@ function App() {
               <AllCourses/>
             </ProtectedRoute>}/>
 
+            <Route path="/adminVerify" element={<AdminVerification/>}></Route>
             <Route path="/adminPanel" element={<AdminPanel/>}></Route>
 
             <Route path="/ytcoursemodule/:ytcourse" element={<YtCourse/>}/>

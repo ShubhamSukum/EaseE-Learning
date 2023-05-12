@@ -15,9 +15,9 @@ adminKeyRouter.post("/getKeys",async(req,res)=>{
         const found=await adminKeysModel.findOne({key});
 
         if(found){
-            res.json({message:"Verified!!"});
+            res.json({message:"Verified!!",valid:"ok"});
         }else{
-            res.json({message:"Authorization revoked!!"});
+            res.json({message:"Authorization revoked!!",valid:"notOk"});
         }
     }
     catch(err){
