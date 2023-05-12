@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useRef, useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
@@ -6,6 +6,13 @@ export const AdminVerification=()=>{
 
     const [vKey,setVKey]=useState("");
     const navigate=useNavigate();
+    const ref=useRef(null);
+
+    useEffect(()=>{
+        if(ref.current){
+            ref.current?.focus()
+        }
+    },[ref]);    
 
     const onSubmit=(e)=>{
         e.preventDefault();
@@ -35,8 +42,8 @@ export const AdminVerification=()=>{
                 style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
 
                 <form onSubmit={onSubmit}>
-                    <input type="password" placeholder="Enter Verfication Code" 
-                    onChange={(e)=>{setVKey(e.target.value)}}/>
+                        <input type="password" ref={ref} placeholder="Enter Verfication Code" 
+                        onChange={(e)=>{setVKey(e.target.value)}}/>
 
                     <button type="submit" id="signUP-Button">Verify</button>
                 </form>

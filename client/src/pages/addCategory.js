@@ -1,5 +1,47 @@
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
+
 export const AddCategory=()=>{
-    return(<>
-        Add Category
+    const [compName,setCompName]=useState([]);
+    const [link,setLink] =useState([]);
+
+    const navigate=useNavigate();
+
+    const onSubmit=(e)=>{
+        e.preventDefault();
+
+        axios.post("http://localhost:3001/createCategory",{imageURL:link,compName:compName})
+        .then((res)=>{
+            alert(res.data.message);
+            navigate("/");
+        }).catch((err)=>{
+            console.log(err);
+        }); 
+    }
+
+    return(
+    <>
+
+        <div className="center" id="admin-panel">
+            <h1>Add Category</h1>
+
+            <form onSubmit={onSubmit}>
+
+                <input type="text" placeholder="Enter Category Name"
+                onChange={(e)=>{setCompName(e.target.value)}}/>
+
+                <input type="text" placeholder="Link of Category Thumbnail"
+                onChange={(e)=>{setLink(e.target.value)}}/>
+
+                <button type="submit" id="signUP-Button">Add</button>
+
+                <br />
+            </form>
+
+        </div>
+        
     </>)
 };
+
+// https://www.aranca.com/assets/uploads/blogs/newcatgban2.jpg

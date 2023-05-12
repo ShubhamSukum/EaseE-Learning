@@ -41,7 +41,7 @@ homeRouter.post("/createCategory",async(req,res)=>{
         const fCompName=await homeModel.findOne({compName});
         
         if(fCompName){
-            return res.json({message:"Course Already exist by this title !!"});
+            return res.json({message:"Category Already exist by this title !!"});
         }
 
         const newCat= new homeModel({imageURL,compName});
