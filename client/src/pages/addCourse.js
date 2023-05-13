@@ -20,11 +20,13 @@ export const AddCourse=()=>{
 
     const onSubmit=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3001/createCourse",{courseId,
+        axios.post("http://localhost:3001/createCourse",{
+            courseId,
             topicName,
             duration,
             compName,
-            courseLink}).then((res)=>{
+            courseLink})
+        .then((res)=>{
                 alert(res.data.message);
                 navigate("/allcourses");
         }).catch((err)=>{

@@ -10,7 +10,7 @@ const courseYtSchema=mongoose.Schema({
         required:true,
     },
     Module:[{moduleNo:Number,moduleName:String,moduleLink:String}],
-    instructor:{
+    instructor:{    
         type:String,
         required:true
     },

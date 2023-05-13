@@ -30,7 +30,6 @@ export const AddCategory=()=>{
 
     return(
     <>
-
         <div className="center" id="admin-panel">
             <h1>Add Category</h1>
 
