@@ -92,15 +92,15 @@ export const AddModule=()=>{
             id="admin-panel"
         >
 
-                <input type="Number" placeholder="Add Module No"
+                <input type="Number" placeholder="Add Module No" value={moduleNo}
                 style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}
                 onChange={(e)=>{setModuleNo(e.target.value)}} required/>
 
-                <input type="text" placeholder="Add Module Name"
+                <input type="text" placeholder="Add Module Name" value={moduleName}
                 style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}
                 onChange={(e)=>{setModuleName(e.target.value)}} required/>
         
-                <input type="text" placeholder="Add Module Link"
+                <input type="text" placeholder="Add Module Link" value={moduleLink}
                 style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}
                 onChange={(e)=>{setModuleLink(e.target.value)}} required/> 
 
