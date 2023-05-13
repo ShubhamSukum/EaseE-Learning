@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState ,useRef} from "react";
 
-
 export const AddModule=()=>{
     const [courseId,setCourseId] = useState("");
     const [topicName,setTopicName] = useState("");
@@ -19,27 +18,36 @@ export const AddModule=()=>{
 
     const onSubmit=(e)=>{
         e.preventDefault();
+            axios.post("http://localhost:3001/createModule",
+            {courseId,topicName,Module:module,instructor,instructorInfo,instructorDp})
+            .then((res)=>{
+                alert(res.data.message);
+            }).catch((err)=>{
+                console.log(err);
+            })
 
-        // xios.post("http://localhost:3001/createModule",
-        // {courseId,topicName,module,instructor,instructorInfo,instructorDp})
-        // .then((res)=>{
-        //     alert(res.data.message);
-        // }).catch((err)=>{
-        //     console.log(err);
-        // })
         console.log(courseId);
         console.log(topicName);
+        console.log(module);
         console.log(instructor);
         console.log(instructorInfo);
         console.log(instructorDp);
     }
 
-    const onSub=(e)=>{
+    // comment 1
+
+    const onSub = (e) => {
         e.preventDefault();
-        setModule([...module,{moduleNo,moduleName,moduleLink}]);
-        // console.log(moduleNo)
-        // console.log(moduleName)
-        // console.log(moduleLink)
+        const newModule = { moduleNo, moduleName, moduleLink };
+        setModule((prev)=>{
+            return [
+                    ...prev,
+                    newModule
+                ]
+        });
+        setModuleNo("");
+        setModuleName("");
+        setModuleLink("");
         console.log(module);
     };
 
@@ -137,3 +145,4 @@ Data
   "enrolled": 1
 }
 */
+
