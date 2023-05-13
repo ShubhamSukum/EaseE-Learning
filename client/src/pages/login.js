@@ -14,7 +14,7 @@ export const Login = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3001/login", { username, password }).then((res) => {
+            await axios.post("https://easee-learning.onrender.com/login", { username, password }).then((res) => {
                 // console.log(res.data)
                 // console.log(res.status)
 

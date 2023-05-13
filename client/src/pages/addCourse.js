@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const AddCourse=()=>{
@@ -10,7 +10,7 @@ export const AddCourse=()=>{
     const [courseLink,setCourseLink]=useState("");
 
     const ref=useRef(null);
-    const navigate=useNavigate();
+    // const navigate=useNavigate();
 
     useEffect(()=>{
         if(ref.current){
@@ -20,7 +20,7 @@ export const AddCourse=()=>{
 
     const onSubmit=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:3001/createCourse",{
+        axios.post("https://easee-learning.onrender.com/createCourse",{
             courseId,
             topicName,
             duration,

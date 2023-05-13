@@ -19,7 +19,7 @@ export const AddCategory=()=>{
     const onSubmit=(e)=>{
         e.preventDefault();
 
-        axios.post("http://localhost:3001/createCategory",{imageURL:link,compName:compName})
+        axios.post("https://easee-learning.onrender.com/createCategory",{imageURL:link,compName:compName})
         .then((res)=>{
             alert(res.data.message);
             navigate("/");

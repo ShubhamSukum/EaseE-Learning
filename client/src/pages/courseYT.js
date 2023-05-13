@@ -11,7 +11,7 @@ export const YtCourse = () => {
 
     useEffect(() => {
         axios
-            .post("http://localhost:3001/moduleYt", { courseId: params.ytcourse })
+            .post("https://easee-learning.onrender.com/moduleYt", { courseId: params.ytcourse })
             .then((res) => {
                 setYtCourse(res.data);
                 setVideo(res?.data[0]?.Module[0]?.moduleLink);

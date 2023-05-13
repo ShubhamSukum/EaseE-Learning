@@ -18,7 +18,7 @@ export const SignUp = () => {
 
 
         try {
-            await axios.post("http://localhost:3001/signup", { name, username, password, confirmPass, college, mobile })
+            await axios.post("https://easee-learning.onrender.com/signup", { name, username, password, confirmPass, college, mobile })
                 .then((res) => {
                     if (res.data.errType === "user") {
                         alert(res.data.message);

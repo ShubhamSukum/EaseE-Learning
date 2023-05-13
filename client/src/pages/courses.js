@@ -11,7 +11,7 @@ export const Courses = () => {
     
 
     useEffect(() => {
-        Axios.post("http://localhost:3001/categories", { compName: params.compName }).then((res) => {
+        Axios.post("https://easee-learning.onrender.com/categories", { compName: params.compName }).then((res) => {
             allCourseList(res.data);
             // console.log(res);
         }).catch((err) => {

@@ -7,7 +7,7 @@ export const AllCourses=()=>{
     // const [courseId,setCourseId]=useState(0);
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/courses").then((res)=>{
+        axios.get("https://easee-learning.onrender.com/courses").then((res)=>{
             setListOfCourses(res.data);
         }).catch((err)=>{
             console.log(err)

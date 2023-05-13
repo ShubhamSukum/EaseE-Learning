@@ -18,7 +18,7 @@ export const AddModule=()=>{
 
     const onSubmit=(e)=>{
         e.preventDefault();
-            axios.post("http://localhost:3001/createModule",
+            axios.post("https://easee-learning.onrender.com/createModule",
             {courseId,topicName,Module:module,instructor,instructorInfo,instructorDp})
             .then((res)=>{
                 alert(res.data.message);

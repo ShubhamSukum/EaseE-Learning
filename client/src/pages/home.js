@@ -9,13 +9,13 @@ export const Home = () => {
     const [testi, allTesti] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/courseCategories").then((res) => {
+        Axios.get("https://easee-learning.onrender.com/courseCategories").then((res) => {
             allCatergory(res.data);
         })
     }, []);
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/getTesti").then((res) => {
+        Axios.get("https://easee-learning.onrender.com/getTesti").then((res) => {
             allTesti(res.data);
         })
     }, []);
