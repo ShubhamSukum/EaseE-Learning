@@ -28,7 +28,7 @@ export const AddCourse=()=>{
             courseLink})
         .then((res)=>{
                 alert(res.data.message);
-                navigate("/allcourses");
+                // navigate("/allcourses");
         }).catch((err)=>{
             console.log(err);
         })
@@ -53,7 +53,7 @@ export const AddCourse=()=>{
                 <input type="text" placeholder="Enter Category Name"
                 onChange={(e)=>{setCompName(e.target.value)}} required/>
         
-                <input type="text" placeholder="Enter Course Link"
+                <input type="text" placeholder="Thumbnail Link"
                 onChange={(e)=>{setCourseLink(e.target.value)}} required/>
 
                 <button type="submit" id="signUP-Button">Add</button>

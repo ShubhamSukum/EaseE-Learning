@@ -26,12 +26,12 @@ export const AddModule=()=>{
                 console.log(err);
             })
 
-        console.log(courseId);
-        console.log(topicName);
-        console.log(module);
-        console.log(instructor);
-        console.log(instructorInfo);
-        console.log(instructorDp);
+        // console.log(courseId);
+        // console.log(topicName);
+        // console.log(module);
+        // console.log(instructor);
+        // console.log(instructorInfo);
+        // console.log(instructorDp);
     }
 
     // comment 1
@@ -48,7 +48,7 @@ export const AddModule=()=>{
         setModuleNo("");
         setModuleName("");
         setModuleLink("");
-        console.log(module);
+        // console.log(module);
     };
 
     useEffect(()=>{
