@@ -37,7 +37,7 @@ export const Navbar = () => {
   }, [handleCtrlG]);
 
   const logout = () => {
-    removeCookie("access_token", { path: "/", domain: "localhost" });
+    removeCookie("access_token", { path: "/", domain: "ease-elearning.netlify.app" });
     localStorage.removeItem("userID");
     navigate("/login");
   };
