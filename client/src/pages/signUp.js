@@ -196,7 +196,8 @@ export const SignUp = () => {
 
             <div className="center" id="goUP">
                 <h1>Sign UP</h1>
-                <i className="fa fa-user-circle" aria-hidden="true" style={{ paddingBottom: "15px", fontSize: "40px" }}></i>
+                <i className="fa fa-user-circle" aria-hidden="true" 
+                style={{ paddingBottom: "15px", fontSize: "40px", paddingLeft:"133px"}}></i>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
                         {/* <label htmlFor="Name">Name</label> */}
