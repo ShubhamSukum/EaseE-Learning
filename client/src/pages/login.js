@@ -19,7 +19,8 @@ export const Login = () => {
                 // console.log(res.status)
 
                 if (res.data.message === "success") {
-                    setCookies("access_token", res.data.token);
+                    // setCookies("access_token", res.data.token);
+                    setCookies("access_token", res.data.token, { path: "/", domain: "ease-elearning.netlify.app" })
                     window.localStorage.setItem("userID", res.data.userId);
                     navigate("/");
                 } else {
