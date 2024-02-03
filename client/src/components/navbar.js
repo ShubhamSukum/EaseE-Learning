@@ -16,6 +16,7 @@ export const Navbar = () => {
       setOurCookie(false);
     }
   }, [cookies]);
+  // ok
 
   const handleCtrlG = useCallback(() => {
     navigate("/adminVerify");
