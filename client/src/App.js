@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router,Routes,Route,Navigate} from "react-router-dom";
+import {HashRouter as Router,Switch ,Route,Navigate} from "react-router-dom";
 
 import {Home} from "./pages/home";
 import {SignUp} from "./pages/signUp";
@@ -24,7 +24,7 @@ function App() {
       <Router>
         <Navbar/>
         
-        <Routes>
+        <Switch>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/component/:compName" element={<ProtectedRoute>
@@ -63,7 +63,7 @@ function App() {
             </ProtectedRoute>
           }/>
           
-        </Routes>
+        </Switch>
       </Router>
     </div>
   );
