@@ -1,21 +1,21 @@
-import express  from "express";
+import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
 // importing routes to seperate code
 import { userRouter } from "./routes/users.js";
-import { homeRouter } from "./routes/home.js"
+import { homeRouter } from "./routes/home.js";
 import { testiRouter } from "./routes/testimonials.js";
-import { coursesRouter } from "./routes/courses.js"
-import { courseModelRouter } from "./routes/courseModule.js"
+import { coursesRouter } from "./routes/courses.js";
+import { courseModelRouter } from "./routes/courseModule.js";
 import { displayVideoRouter } from "./routes/displayVideo.js";
-import { adminRouter } from "./routes/adminRoute.js"
-import {adminKeyRouter} from "./routes/adminKeysroute.js"
+import { adminRouter } from "./routes/adminRoute.js";
+import { adminKeyRouter } from "./routes/adminKeysroute.js";
 
-const app=express();
+const app = express();
 
 app.use(express.json());
-app.use(cors());    // Cross Origin Resource Sharing
+app.use(cors()); // Cross Origin Resource Sharing
 
 // for reducing code complexity router code is written in userRouter
 app.use(userRouter);
@@ -27,20 +27,31 @@ app.use(displayVideoRouter);
 app.use(adminRouter);
 app.use(adminKeyRouter);
 
+app.get("/ping", (req, res) => {
+  try {
+    res.json({ ready: true });
+  } catch (err) {
+    res.json(err);
+  }
+});
+
 // Database Connection
-const dbConnect=mongoose.connect(
+const dbConnect = mongoose
+  .connect(
     "mongodb+srv://EaseE:learning@coursemanagementsystem.0e6ivsq.mongodb.net/EaseE?retryWrites=true&w=majority",
     {
-        useNewUrlParser:true,
-        useUnifiedTopology:true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     }
-).then(()=>{
+  )
+  .then(() => {
     console.log("database connected!!");
-    
-    app.listen(3001,()=>{
-        console.log("OUR SERVER IS RUNNING!!");
+
+    app.listen(3001, () => {
+      console.log("OUR SERVER IS RUNNING!!");
     });
-}).catch((error)=>{
+  })
+  .catch((error) => {
     console.log("Connection Failed !!");
     console.log(error);
-});
+  });
